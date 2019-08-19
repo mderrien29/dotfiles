@@ -1,0 +1,28 @@
+[/]
+area-screenshot-clip=''
+terminal=''
+www='<Super>r'
+home='<Super>e'
+screensaver='<Shift><Super>l'
+area-screenshot='<Shift><Super>s'
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+
+[custom-keybindings/custom2]
+binding='<Super>t'
+command='alacritty'
+name='alacritty'
+
+[custom-keybindings/custom1]
+binding=''
+command='/usr/bin/com.github.spheras.desktopfolder show-desktop'
+name='/usr/bin/com.github.spheras.desktopfolder show-desktop'
+
+[custom-keybindings/custom0]
+binding='<Primary><Shift>Escape'
+command='monitor'
+name='monitor'
+
+[custom-keybindings/custom3]
+binding='<Super>d'
+command='rofi -show drun'
+name='rofi -show drun'
