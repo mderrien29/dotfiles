@@ -31,5 +31,10 @@ sudo dpkg -i google-chrome*.deb
 sudo apt install -f # fix errors
 rm google-chrome*.deb
 
+# elementary tweaks
+sudo add-apt-repository -y  ppa:philip.scott/elementary-tweaks
+sudo apt-get update
+sudo apt-get install elementary-tweaks
+
 sudo apt autoremove
 
