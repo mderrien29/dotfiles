@@ -1,6 +1,6 @@
 # mderrien's dotfiles
 
-> Installation is not really working properly, more of a guideline for manual installation
+> Update is not really working properly, more of a guideline for manual installation
 > At least for now
 
 ## install
@@ -11,4 +11,14 @@ Will download programs and stuff
 
 TODO: 
 - symlinks
+
+## scripts
+
+`clean_config.sh`
+
+`delete_savefiles.sh --delete`
+
+`purge_deleted.sh`
+
+`remove_ppas.sh --delete`
 
