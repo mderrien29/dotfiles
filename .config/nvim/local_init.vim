@@ -31,3 +31,9 @@ let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
 "" auto indent
 set autoindent
 
+"" folds
+set foldlevel=99 "" no folds on open
+inoremap <Leader>c <C-O>za
+nnoremap <Leader>c za
+onoremap <Leader>c <C-C>za
+vnoremap <Leader>c zf
