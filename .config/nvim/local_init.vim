@@ -28,3 +28,6 @@ let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
 :hi! def link TodoBetterComments Todo
 :hi! def link HighlightBetterComments Special
 
+"" auto indent
+set autoindent
+

@@ -470,7 +470,6 @@ nnoremap <Leader>o :.Gbrowse<CR>
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 
-
 " go
 " vim-go
 " run :GoBuild or :GoTestCompile based on the go file
