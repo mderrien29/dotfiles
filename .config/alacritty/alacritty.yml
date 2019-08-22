@@ -95,30 +95,30 @@ scrolling:
 #
 # Some applications, like Emacs, rely on knowing about the width of a tab.
 # To prevent unexpected behavior in these applications, it's also required to
-# change the `it` value in terminfo when altering this setting.
-tabspaces: 8
+  # change the `it` value in terminfo when altering this setting.
+tabspaces: 2
 
-# Font configuration (changes require restart)
 # Font configuration (changes require restart)
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Droid Sans Mono Slashed for Powerline
+    family: monospace 
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Droid Sans Mono Slashed for Powerline
+    family: monospace
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: Droid Sans Mono Slashed for Powerline
+    family: monospace
     # Style can be specified to pick a specific face.
-    # style: Italic# If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+    # style: Italic
+
+raw_bold_text_with_bright_colors: true
 
 
 # Specifying a `duration` of `0` will disable the visual bell.
