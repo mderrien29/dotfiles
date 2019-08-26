@@ -20,3 +20,6 @@ ln -sf $PWD/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 # rofi
 mkdir ~/.config/rofi
 ln -sf $PWD/.config/rofi/config.rasi ~/.config/rofi/config.rasi
+
+# tmux
+ln -sf $PWD/.tmux.conf ~/.tmux.conf

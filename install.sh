@@ -17,6 +17,9 @@ sudo apt install alacritty -y
 sudo apt install zsh -y 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# tmux 
+sudo apt install tmux -y
+
 # neovim
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update

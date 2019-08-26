@@ -98,7 +98,6 @@ source $ZSH/oh-my-zsh.sh
 alias ll="ls -la" # mderrien 8/04
 alias nrun="npm run" # 9/05
 alias pop="xdg-open" # 11/07
-alias tmux="TERM=screen-256color-bce tmux"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -110,3 +109,4 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | s
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export TERM=xterm-256color
+

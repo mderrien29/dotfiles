@@ -62,9 +62,6 @@ Plug 'xolox/vim-session'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-"" Color
-Plug 'tomasr/molokai'
-
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
