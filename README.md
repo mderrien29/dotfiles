@@ -5,12 +5,24 @@
 
 ## install
 
-Will download programs and stuff
+- software-properties-common
+- vlc & codecs
+- qbittorent
+- eddy
+- alacritty
+- zsh & oh-my-zsh
+- neovim
+- rofi
+- google-chrome
+- elementary-tweaks
 
-## update
+## update 
 
-TODO: 
-- symlinks
+- `~/.config/nvim`
+- `~/.config/rofi`
+- `~/.config/alacritty`
+- `~/.zshrc`
+- keyboard shortcuts (dconf)
 
 ## scripts
 
