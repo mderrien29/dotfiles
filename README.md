@@ -11,6 +11,7 @@
 - eddy
 - alacritty
 - zsh & oh-my-zsh
+- tmux
 - neovim
 - rofi
 - google-chrome
@@ -22,6 +23,7 @@
 - `~/.config/rofi`
 - `~/.config/alacritty`
 - `~/.zshrc`
+- `~/.tmux.conf`
 - keyboard shortcuts (dconf)
 
 ## scripts
