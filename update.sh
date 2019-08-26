@@ -18,7 +18,7 @@ ln -sf $PWD/.config/nvim/colors/shades_of_purple.vim ~/.config/nvim/colors/shade
 ln -sf $PWD/.config/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # rofi
-mkdir ~/.config/rofi
+mkdir -p ~/.config/rofi
 ln -sf $PWD/.config/rofi/config.rasi ~/.config/rofi/config.rasi
 
 # tmux
