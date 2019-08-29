@@ -12,8 +12,9 @@ set sw=2
 "" Color
 set termguicolors
 syntax enable
-colorscheme nord
-let g:lightline = { 'colorscheme': 'nord' }
+colorscheme palenight
+let g:lightline = { 'colorscheme': 'palenight' }
+let g:lightline.colorscheme = 'palenight'
 
 set omnifunc=syntaxcomplete#Complete
 

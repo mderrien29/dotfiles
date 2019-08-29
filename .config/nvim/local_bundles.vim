@@ -6,5 +6,5 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
-Plug 'arcticicestudio/nord-vim'
+Plug 'drewtempelmeyer/palenight.vim'
 
