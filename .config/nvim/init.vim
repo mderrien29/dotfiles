@@ -1,4 +1,4 @@
-" vim-bootstrap 
+" vim-bootstrap
 
 "*****************************************************************************
 "" Vim-PLug core
@@ -35,7 +35,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'w0rp/ale'
 Plug 'Yggdroot/indentLine'
-Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 
@@ -76,7 +75,6 @@ Plug 'mattn/emmet-vim'
 " javascript
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
-
 
 " python
 "" Python Bundle
@@ -119,9 +117,9 @@ set fileencodings=utf-8
 set backspace=indent,eol,start
 
 "" Tabs. May be overridden by autocmd rules
-set tabstop=4
-set softtabstop=0
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 "" Map leader to ,
@@ -178,7 +176,6 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
 endif
 
 "" Disable the blinking cursor.
@@ -236,7 +233,6 @@ let Grep_Skip_Dirs = '.git node_modules'
 
 " terminal emulation
 nnoremap <silent> <leader>sh :terminal<CR>
-
 
 "*****************************************************************************
 "" Commands
@@ -456,7 +452,6 @@ let g:jedi#smart_auto_mappings = 0
 :call extend(g:ale_linters, {
     \'python': ['flake8'], })
 
-
 " Syntax highlight
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
@@ -471,16 +466,8 @@ let g:vue_disable_pre_processors=1
 " vim vue plugin
 let g:vim_vue_plugin_load_full_syntax = 1
 
-
-"*****************************************************************************
-"*****************************************************************************
-
 "" Include user's local vim config
 if filereadable(expand("~/.config/nvim/local_init.vim"))
   source ~/.config/nvim/local_init.vim
 endif
-
-"*****************************************************************************
-"" Convenience variables
-"*****************************************************************************
 
