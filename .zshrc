@@ -103,10 +103,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# tmux
+export TERM=xterm-256color
+
+# transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export TERM=xterm-256color
-
+# wttr (meteo)
+alias meteo="weather"
+weather() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage: \nweather <city>"; return 1; fi
+curl http://fr.wttr.in/$1; }
