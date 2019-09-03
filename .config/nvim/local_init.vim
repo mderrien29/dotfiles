@@ -14,7 +14,6 @@ set termguicolors
 syntax enable
 colorscheme palenight
 let g:lightline = { 'colorscheme': 'palenight' }
-let g:lightline.colorscheme = 'palenight'
 
 set omnifunc=syntaxcomplete#Complete
 

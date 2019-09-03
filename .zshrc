@@ -106,7 +106,7 @@ export NVM_DIR="$HOME/.nvm"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# tmux
+# tmux fix vim colorscheme
 export TERM=xterm-256color
 
 # transfer.sh
