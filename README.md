@@ -14,7 +14,7 @@
 - tmux
 - neovim
 - rofi
-- google-chrome
+- firefox
 - elementary-tweaks
 
 ## update 

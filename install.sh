@@ -28,11 +28,8 @@ sudo apt install neovim -y
 # rofi
 sudo apt install rofi
 
-# google chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome*.deb
-sudo apt install -f # fix errors
-rm google-chrome*.deb
+# firefox
+sudo apt install firefox
 
 # elementary tweaks
 sudo add-apt-repository -y  ppa:philip.scott/elementary-tweaks
