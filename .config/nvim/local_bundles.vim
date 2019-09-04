@@ -8,3 +8,4 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bling/vim-bufferline'
+Plug 'Valloric/YouCompleteMe'
