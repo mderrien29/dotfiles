@@ -54,10 +54,6 @@ Plug 'Shougo/vimproc.vim', {'do': g:make}
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
-"" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
@@ -88,7 +84,6 @@ Plug 'HerringtonDarkholme/yats.vim'
 
 " vuejs
 Plug 'posva/vim-vue'
-Plug 'leafOfTree/vim-vue-plugin'
 
 "*****************************************************************************
 "*****************************************************************************
@@ -103,7 +98,6 @@ call plug#end()
 " Required:
 filetype plugin indent on
 
-
 "*****************************************************************************
 "" Basic Setup
 "*****************************************************************************"
@@ -111,7 +105,6 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
-
 
 "" Fix backspace indent
 set backspace=indent,eol,start
@@ -161,22 +154,6 @@ set mousemodel=popup
 set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
-
-if has("gui_running")
-  if has("gui_mac") || has("gui_macvim")
-    set guifont=Menlo:h12
-    set transparency=7
-  endif
-else
-  let g:CSApprox_loaded = 1
-
-  " IndentLine
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
-  let g:indentLine_char = '┆'
-  let g:indentLine_faster = 1
-
-endif
 
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
@@ -254,11 +231,8 @@ endif
 "*****************************************************************************
 "" Autocmd Rules
 "*****************************************************************************
-"" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
-augroup vimrc-sync-fromstart
-  autocmd!
-  autocmd BufEnter * :syntax sync maxlines=200
-augroup END
+
+syntax sync fromstart
 
 "" Remember cursor position
 augroup vimrc-remember-cursor-position
@@ -343,12 +317,6 @@ nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>y :History:<CR>
 
-" snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsEditSplit="vertical"
-
 " ale
 let g:ale_linters = {}
 
@@ -370,12 +338,6 @@ endif
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
-
-if has('macunix')
-  " pbcopy for OSX copy/paste
-  vmap <C-x> :!pbcopy<CR>
-  vmap <C-c> :w !pbcopy<CR><CR>
-endif
 
 "" Buffer nav
 noremap <leader>z :bp<CR>
@@ -409,62 +371,6 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "*****************************************************************************
 "" Custom configs
 "*****************************************************************************
-
-" c
-autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
-
-" html
-" for html files, 2 spaces
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
-
-
-" javascript
-let g:javascript_enable_domhtmlcss = 1
-
-" vim-javascript
-augroup vimrc-javascript
-  autocmd!
-  autocmd FileType javascript setl tabstop=2|setl shiftwidth=2|setl expandtab softtabstop=2
-augroup END
-
-" python
-" vim-python
-augroup vimrc-python
-  autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-augroup END
-
-" jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
-
-" ale
-:call extend(g:ale_linters, {
-    \'python': ['flake8'], })
-
-" Syntax highlight
-" Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
-
-" typescript
-let g:yats_host_keyword = 1
-
-" vuejs
-" vim vue
-let g:vue_disable_pre_processors=1
-" vim vue plugin
-let g:vim_vue_plugin_load_full_syntax = 1
 
 "" Include user's local vim config
 if filereadable(expand("~/.config/nvim/local_init.vim"))
