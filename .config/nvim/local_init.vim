@@ -1,30 +1,3 @@
-" javascript
-let g:javascript_enable_domhtmlcss = 1
-
-" python
-" vim-python
-augroup vimrc-python
-  autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-augroup END
-
-" ale
-:call extend(g:ale_linters, {
-    \'python': ['flake8'], })
-
-" Syntax highlight
-" Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
-
-" typescript
-let g:yats_host_keyword = 1
-
-" Enable deoplete at startup
-let g:deoplete#enable_at_startup = 1
-
 let g:loaded_matchparen=1
 set cursorline
 
