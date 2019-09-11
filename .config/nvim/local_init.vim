@@ -43,7 +43,7 @@ autocmd BufWritePre *.html :Prettier
 autocmd BufWritePre *.css :Prettier
 autocmd BufWritePre *.py :Prettier
 
-nnoremap ; :
+nnoremap ; .
 nnoremap J o<esc>k
 nnoremap K O<esc>j 
 
