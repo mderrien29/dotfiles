@@ -1,4 +1,6 @@
-let g:loaded_matchparen=1
+set nu rnu
+
+"let g:loaded_matchparen=1
 set cursorline
 
 ""tabs
@@ -40,4 +42,8 @@ autocmd BufWritePre *.ts :Prettier
 autocmd BufWritePre *.html :Prettier
 autocmd BufWritePre *.css :Prettier
 autocmd BufWritePre *.py :Prettier
+
+nnoremap ; :
+nnoremap J o<esc>k
+nnoremap K O<esc>j 
 
