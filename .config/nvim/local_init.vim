@@ -12,8 +12,6 @@ syntax enable
 colorscheme palenight
 let g:lightline = { 'colorscheme': 'palenight' }
 
-set omnifunc=syntaxcomplete#Complete
-
 "" Colorizer highlighting 
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
 
@@ -35,4 +33,11 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+autocmd BufWritePre *.js :Prettier
+autocmd BufWritePre *.vue :Prettier
+autocmd BufWritePre *.ts :Prettier
+autocmd BufWritePre *.html :Prettier
+autocmd BufWritePre *.css :Prettier
+autocmd BufWritePre *.py :Prettier
 
