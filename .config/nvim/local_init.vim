@@ -1,6 +1,5 @@
 syntax sync minlines=2000
 autocmd BufEnter * :syntax sync fromstart
-set wrap!
 
 " fzf ?
 set wildmode=list:longest,list:full
