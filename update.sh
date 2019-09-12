@@ -8,6 +8,7 @@ ln -sf $PWD/.zshrc ~/.zshrc
 # nvim
 ln -sf $PWD/.config/nvim/init.vim ~/.config/nvim/init.vim
 ln -sf $PWD/.config/nvim/local_init.vim  ~/.config/nvim/local_init.vim 
+ln -sf $PWD/.config/nvim/local_mappings.vim  ~/.config/nvim/local_mappings.vim 
 ln -sf $PWD/.config/nvim/local_bundles.vim ~/.config/nvim/local_bundles.vim
 ln -sf $PWD/.config/nvim/autoload/plug.vim  ~/.config/nvim/autoload/plug.vim
 
