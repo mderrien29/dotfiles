@@ -30,11 +30,11 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'bling/vim-bufferline'
 Plug 'w0rp/ale'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'arcticicestudio/nord-vim'
+
 
 "" LANGUAGE SUPPORT
 Plug 'sheerun/vim-polyglot'
-
