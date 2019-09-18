@@ -32,7 +32,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'bling/vim-bufferline'
 Plug 'w0rp/ale'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'arcticicestudio/nord-vim'
 
 
