@@ -1,3 +1,15 @@
+" don't use arrowkeys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" really, just don't
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
@@ -47,9 +59,6 @@ noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
-"" Close buffer
-noremap <leader>c :bd<CR>
-
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
@@ -81,10 +90,5 @@ nnoremap ; .
 nnoremap J o<esc>k
 nnoremap K O<esc>j 
 
-"folds
-inoremap <Leader>c <C-O>za
-nnoremap <Leader>c za
-onoremap <Leader>c <C-C>za
-vnoremap <Leader>c zf
 
 

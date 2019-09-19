@@ -14,6 +14,7 @@ Plug 'Shougo/vimproc.vim', {'do': g:make}
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
+"" random
 Plug 'tpope/vim-sensible'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
@@ -23,18 +24,20 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
-Plug 'Shougo/deoplete.nvim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'chrisbra/colorizer'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
-Plug 'mzlogin/vim-markdown-toc'
 Plug 'bling/vim-bufferline'
-Plug 'w0rp/ale'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
-Plug 'arcticicestudio/nord-vim'
 
+" colorscheme
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 "" LANGUAGE SUPPORT
 Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
+Plug 'mzlogin/vim-markdown-toc'
+
+

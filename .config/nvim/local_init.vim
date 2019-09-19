@@ -31,14 +31,22 @@ set cursorline
 set sts=2
 set ts=2
 set sw=2
+set expandtab
+autocmd FileType make setlocal noexpandtab
+
+"" fold
+setlocal foldmethod=syntax
+set nofoldenable
+set foldlevel=100 "weird behavior with first zc"
 
 "" Color
 set termguicolors
 syntax enable
-colorscheme nord
-let g:lightline = { 'colorscheme': 'nord' }
+let g:dracula_italic = 0
+colorscheme dracula
+let g:lightline = { 'colorscheme': 'dracula' }
 
-"" Colorizer highlighting 
+"" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
 
 "" auto indent
@@ -53,17 +61,19 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" don't use arrowkeys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" completion
+" <TAB>: completion.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" really, just don't
-inoremap <Up>    <NOP>
-inoremap <Down>  <NOP>
-inoremap <Left>  <NOP>
-inoremap <Right> <NOP>
+let g:coc_global_extensions = [
+\'coc-tsserver',
+\'coc-json',
+\'coc-html',
+\'coc-css',
+\'coc-vetur'
+\]
 
 " fix files on save
 let g:ale_fix_on_save = 1
@@ -72,11 +82,4 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'always'
 let g:ale_lint_delay = 1000
 
-" use nice symbols for errors and warnings
-let g:ale_sign_error = '✗\ '
-let g:ale_sign_warning = '⚠\ '
 
-" fixer configurations
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\}
