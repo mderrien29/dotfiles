@@ -81,9 +81,17 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+function! s:ToggleBlame()
+    if &l:filetype ==# 'fugitiveblame'
+        close
+    else
+        Gblame
+    endif
+endfunction
+
 nnoremap <silent> <F1> :NERDTreeToggle<CR>
 nnoremap <silent> <F2> :FZF -m<CR>
-nnoremap <silent> <F3> :Buffers<CR>
+nnoremap <silent> <F3> :call <SID>ToggleBlame()<CR>
 nnoremap <silent> <F4> :Prettier<CR>
 
 nnoremap ; .

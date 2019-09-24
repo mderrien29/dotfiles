@@ -15,6 +15,9 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
 "" random
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
@@ -32,9 +35,12 @@ Plug 'bling/vim-bufferline'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Rigellute/shades-of-purple.vim'
 
 "" LANGUAGE SUPPORT
 Plug 'sheerun/vim-polyglot'
+Plug 'burnettk/vim-angular'
+Plug 'leafgarland/typescript-vim'
 Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
