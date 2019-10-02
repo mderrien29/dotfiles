@@ -37,11 +37,12 @@ Plug 'bling/vim-bufferline'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 "" LANGUAGE SUPPORT
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'burnettk/vim-angular'
-Plug 'leafgarland/typescript-vim'
+Plug 'posva/vim-vue'
 Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
-
+Plug 'sheerun/vim-polyglot'
 
