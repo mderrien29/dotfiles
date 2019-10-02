@@ -1,6 +1,8 @@
 syntax sync minlines=2000
 autocmd BufEnter * :syntax sync fromstart
 
+set mouse=a
+
 " fzf ?
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__

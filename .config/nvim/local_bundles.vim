@@ -32,6 +32,13 @@ Plug 'chrisbra/colorizer'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bling/vim-bufferline'
+Plug 'whiteinge/diffconflicts'
+Plug 'itchyny/vim-parenmatch'
+
+"" Text objs
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-function'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -41,6 +48,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'burnettk/vim-angular'
 Plug 'posva/vim-vue'
 Plug 'w0rp/ale'
+Plug 'Valloric/MatchTagAlways'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
