@@ -35,10 +35,8 @@ Plug 'bling/vim-bufferline'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'Rigellute/shades-of-purple.vim'
 
 "" LANGUAGE SUPPORT
-Plug 'sheerun/vim-polyglot'
 Plug 'burnettk/vim-angular'
 Plug 'leafgarland/typescript-vim'
 Plug 'w0rp/ale'
