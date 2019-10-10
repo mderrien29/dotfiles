@@ -30,11 +30,10 @@ set nu rnu
 set cursorline
 
 ""tabs
-set sts=2
-set ts=2
-set sw=2
 set expandtab
-autocmd FileType make setlocal noexpandtab
+set tabstop=2
+set shiftwidth=2
+filetype plugin indent on
 
 "" fold
 setlocal foldmethod=syntax
@@ -50,9 +49,6 @@ let g:lightline = { 'colorscheme': 'dracula' }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
-
-"" auto indent
-set autoindent
 
 "" switch cursor from block in insert mode (tmux fix)
 if exists('$TMUX')

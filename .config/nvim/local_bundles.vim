@@ -35,11 +35,6 @@ Plug 'bling/vim-bufferline'
 Plug 'whiteinge/diffconflicts'
 Plug 'itchyny/vim-parenmatch'
 
-"" Text objs
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-textobj-function'
-
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }
 
@@ -52,5 +47,4 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
-Plug 'sheerun/vim-polyglot'
 
