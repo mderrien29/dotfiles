@@ -40,6 +40,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 "" LANGUAGE SUPPORT
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'burnettk/vim-angular'
 Plug 'posva/vim-vue'
 Plug 'w0rp/ale'
