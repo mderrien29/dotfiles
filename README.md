@@ -5,6 +5,7 @@
 
 ## install
 
+- i3
 - software-properties-common
 - vlc & codecs
 - qbittorent
@@ -15,7 +16,7 @@
 - neovim
 - rofi
 - firefox
-- elementary-tweaks
+- livestreamer
 
 ## update 
 
@@ -24,7 +25,7 @@
 - `~/.config/alacritty`
 - `~/.zshrc`
 - `~/.tmux.conf`
-- keyboard shortcuts (dconf)
+- `~/.config/i3`
 
 ## scripts
 

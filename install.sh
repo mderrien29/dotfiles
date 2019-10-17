@@ -31,12 +31,11 @@ sudo apt install rofi
 # firefox
 sudo apt install firefox
 
-# elementary tweaks
-sudo add-apt-repository -y  ppa:philip.scott/elementary-tweaks
-sudo apt-get update
-sudo apt-get install elementary-tweaks
+# livestreamer & mpv
+sudo apt install livestreamer mpv
+
+# i3
+sudo apt install i3*
 
 sudo apt autoremove
 
-# livestreamer & mpv
-sudo apt install livestreamer mpv
