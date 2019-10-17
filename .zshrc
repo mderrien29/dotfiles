@@ -117,3 +117,13 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | s
 alias meteo="weather"
 weather() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage: \nweather <city>"; return 1; fi
 curl http://fr.wttr.in/$1; }
+
+twitch() {
+  livestreamer twitch.tv/$1 $2 --player "mpv --cache 2048"
+}
+
+port() {
+  sudo netstat -ltnp | grep :$1
+}
+
+

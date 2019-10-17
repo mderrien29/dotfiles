@@ -38,3 +38,5 @@ sudo apt-get install elementary-tweaks
 
 sudo apt autoremove
 
+# livestreamer & mpv
+sudo apt install livestreamer mpv
