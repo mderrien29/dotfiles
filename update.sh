@@ -21,6 +21,10 @@ ln -sf $PWD/.tmux.conf ~/.tmux.conf
 mkdir ~/.config/i3/
 ln -sf $PWD/.config/i3/config ~/.config/i3/config
 
+# i3 status
+mkdir ~/.config/i3status/
+ln -sf $PWD/.config/i3status/config ~/.config/i3status/config
+
 # rofi
 mkdir ~/.config/rofi
 ln -sf $PWD/.config/rofi/config ~/.config/rofi/config

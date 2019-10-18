@@ -34,11 +34,11 @@ sudo apt install firefox
 # livestreamer & mpv
 sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt update
-sudo apt install streamlink
-sudo apt install mpv
+sudo apt install streamlink mpv
 
 # i3
-sudo apt install i3*
+sudo apt install i3* feh
+
 
 sudo apt autoremove
 
