@@ -119,7 +119,7 @@ weather() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage: \nweather
 curl http://fr.wttr.in/$1; }
 
 twitch() {
-  livestreamer twitch.tv/$1 $2 --player "mpv --cache 2048"
+  streamlink twitch.tv/$1 $2 --player "mpv --cache 2048"
 }
 
 port() {

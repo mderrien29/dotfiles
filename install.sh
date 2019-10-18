@@ -32,7 +32,10 @@ sudo apt install rofi
 sudo apt install firefox
 
 # livestreamer & mpv
-sudo apt install livestreamer mpv
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt update
+sudo apt install streamlink
+sudo apt install mpv
 
 # i3
 sudo apt install i3*
