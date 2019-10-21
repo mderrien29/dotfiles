@@ -171,3 +171,4 @@ bar {
   font pango:Open Sans 12
   status_command i3status
 }
+
