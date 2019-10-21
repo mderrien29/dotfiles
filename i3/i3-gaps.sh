@@ -12,4 +12,4 @@ cd build
 make
 sudo make install
 
-sudo apt install i3status -y
+sudo apt install i3status compton -y
