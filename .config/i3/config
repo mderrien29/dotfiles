@@ -18,7 +18,7 @@ gaps inner 15
 gaps outer 0
 # feh (background)
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
-exec --no-startup-id xautolock -time 10 -locker lock
+exec --no-startup-id xautolock -locker lock
 
 # i3 config file (v4)
 #
