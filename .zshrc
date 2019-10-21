@@ -99,6 +99,7 @@ alias ll="ls -la" # mderrien 8/04
 alias nrun="npm run" # 9/05
 alias pop="xdg-open" # 11/07
 
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

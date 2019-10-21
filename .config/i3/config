@@ -6,14 +6,19 @@
 #
 
 # compton
-exec compton
+exec --no-startup-id compton
+
+exec --no-startup-id setxkbmap -layout fr -option caps:escape
+
 # not titlebar
+for_window [class=.*] border normal 1
 for_window [class="^.*"] border pixel 3
 # gaps
 gaps inner 10
 gaps outer 0
 # feh (background)
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
+exec --no-startup-id xautolock -time 10 -locker lock
 
 # i3 config file (v4)
 #
@@ -58,6 +63,21 @@ bindsym $mod+d exec rofi -show drun
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -94,7 +114,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+z layout tabbed
-bindsym $mod+Shift+e layout toggle split
+#bindsym $mod+Shift+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -136,8 +156,19 @@ bindsym $mod+Shift+agrave move container to workspace 10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+l exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+set $mode_system System (l) lock, (Shift+e) logout, (Shift+r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id lock
+    bindsym Shift+e exec --no-startup-id i3-msg exit
+    bindsym Shift+r exec --no-startup-id reboot
+    bindsym Shift+s exec --no-startup-id shutdown now
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+e mode "$mode_system"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

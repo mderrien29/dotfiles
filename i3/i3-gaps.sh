@@ -11,3 +11,5 @@ cd build
 ../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
 make
 sudo make install
+
+sudo apt install i3status -y

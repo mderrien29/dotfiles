@@ -25,9 +25,6 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install neovim -y
 
-# rofi
-sudo apt install rofi
-
 # firefox
 sudo apt install firefox
 
@@ -36,9 +33,6 @@ sudo add-apt-repository ppa:nilarimogard/webupd8
 sudo apt update
 sudo apt install streamlink mpv
 
-# i3
-sudo apt install i3* feh
-
-
 sudo apt autoremove
 
+sudo ./i3/install.sh
