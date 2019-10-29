@@ -89,4 +89,4 @@ let g:ale_lint_on_text_changed = 'always'
 let g:ale_lint_delay = 1000
 
 " quotes in json
-set conceallevel=0
+autocmd Filetype json let g:indentLine_setConceal = 0
