@@ -48,4 +48,6 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
 
