@@ -123,6 +123,10 @@ twitch() {
   streamlink twitch.tv/$1 $2 --player "mpv --cache 2048"
 }
 
+youtube() {
+  streamlink https://www.youtube.com/watch?v=$1 $2 --player "mpv --cache 2048"
+}
+
 port() {
   sudo netstat -ltnp | grep :$1
 }
