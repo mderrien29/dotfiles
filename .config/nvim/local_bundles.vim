@@ -37,6 +37,7 @@ Plug 'itchyny/vim-parenmatch'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Rigellute/shades-of-purple.vim'
 
 "" LANGUAGE SUPPORT
 Plug 'HerringtonDarkholme/yats.vim'

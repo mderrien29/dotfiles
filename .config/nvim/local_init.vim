@@ -52,8 +52,10 @@ augroup end
 set termguicolors
 syntax enable
 let g:dracula_italic = 0
-colorscheme dracula
-let g:lightline = { 'colorscheme': 'dracula' }
+"colorscheme dracula
+colorscheme shades_of_purple
+"let g:lightline = { 'colorscheme': 'dracula' }
+let g:lightline = { 'colorscheme': 'shades_of_purple' }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
