@@ -91,7 +91,7 @@ let g:ale_lint_on_text_changed = 'always'
 let g:ale_lint_delay = 1000
 
 " quotes in json
-autocmd Filetype json let g:indentLine_setConceal = 0
+let g:indentLine_setConceal = 0
 
 " latex
 let g:livepreview_previewer = 'firefox'
