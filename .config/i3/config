@@ -10,12 +10,23 @@ exec --no-startup-id compton --config ~/.config/compton/compton.conf
 
 exec --no-startup-id setxkbmap -layout fr -option caps:escape
 
-# no titlebar
-for_window [class="^.*"] border pixel 2
+<<<<<<< HEAD
+# Don’t treat Plasma pop-ups as full-sized windows
+for_window [class="plasmashell"] floating enable
+
+# Don’t spawn an empty window for the Plasma Desktop
+for_window [title="Desktop — Plasma"] kill, floating enable, border none
+
+# Don’t let notifications and non-interactive pop-up windows steal focus
+no_focus [class="plasmashell" window_type="notification"]
+no_focus [class="plasmashell" window_type="on_screen_display"]
+
+for_window [class="^.*"] border pixel 1
 
 # gaps
-gaps inner 15
-gaps outer 0
+gaps inner 10
+gaps outer 5
+
 smart_gaps on
 
 # feh (background)
@@ -200,12 +211,4 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-  #position bottom
-  #font pango:Open Sans 12
-  #status_command i3status
-#}
 
