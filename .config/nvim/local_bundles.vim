@@ -34,6 +34,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'bling/vim-bufferline'
 Plug 'whiteinge/diffconflicts'
 Plug 'itchyny/vim-parenmatch'
+Plug 'christoomey/vim-conflicted'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }

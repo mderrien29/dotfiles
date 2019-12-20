@@ -98,5 +98,5 @@ nnoremap ; .
 nnoremap J o<esc>k
 nnoremap K O<esc>j 
 
-
-
+" pasting in visual mode will replace selection
+xnoremap p "_dP
