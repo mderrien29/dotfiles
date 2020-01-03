@@ -1,7 +1,13 @@
-rofi.modi: drun
-rofi.lines: 6
-rofi.width: 50
-rofi.show-icons: true
-rofi.sidebar-mode: true
-rofi.theme: Pop-Dark
-rofi.m: -4
+rofi.lines: 5
+rofi.eh: 2
+rofi.padding: 200
+rofi.fullscreen: true
+rofi.bw: 0
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+
+!                  'background', 'border', 'separator'
+rofi.color-window: argb:a82d303b, #7c8389, #1d1f21
+! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: argb:a81d1f21, #f3f4f5, argb:3c1d1f21, argb:3c1d1f21, #9575cd 
+rofi.font: System San Francisco Display 18
