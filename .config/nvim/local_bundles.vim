@@ -39,6 +39,7 @@ Plug 'christoomey/vim-conflicted'
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'Rigellute/shades-of-purple.vim'
+Plug 'sainnhe/edge'
 
 "" LANGUAGE SUPPORT
 Plug 'HerringtonDarkholme/yats.vim'
@@ -51,5 +52,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'heavenshell/vim-jsdoc'
 
 

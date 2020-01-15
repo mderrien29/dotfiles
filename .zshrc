@@ -101,6 +101,7 @@ alias nrun="npm run" # 9/05
 alias pop="xdg-open" # 11/07
 alias mvg="mvg -g"
 alias cpg="cpg -g"
+alias clear="clear -x"
 
 
 export NVM_DIR="$HOME/.nvm"
