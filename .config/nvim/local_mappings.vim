@@ -95,7 +95,5 @@ nnoremap <silent> <F3> :call <SID>ToggleBlame()<CR>
 " indent file and keep cursor position
 nnoremap <silent> <F4> mzgg=G`z<CR>
 
-nnoremap ; .
-
 " pasting in visual mode will replace selection
 xnoremap p "_dP
