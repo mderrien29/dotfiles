@@ -96,8 +96,6 @@ nnoremap <silent> <F3> :call <SID>ToggleBlame()<CR>
 nnoremap <silent> <F4> mzgg=G`z<CR>
 
 nnoremap ; .
-nnoremap J o<esc>k
-nnoremap K O<esc>j 
 
 " pasting in visual mode will replace selection
 xnoremap p "_dP
