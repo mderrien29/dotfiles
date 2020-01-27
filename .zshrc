@@ -168,6 +168,9 @@ preexec() {
 bindkey -M vicmd '?' history-incremental-search-backward
 bindkey -M vicmd '/' history-incremental-search-forward
 
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+
 # Beginning search with arrow keys
 bindkey "^[OA" up-line-or-beginning-search
 bindkey "^[OB" down-line-or-beginning-search
