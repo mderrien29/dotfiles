@@ -8,7 +8,7 @@
 # compton
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 
-exec --no-startup-id setxkbmap -layout us -option caps:escape
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl
 
 # Don’t treat Plasma pop-ups as full-sized windows
 for_window [class="plasmashell"] floating enable
