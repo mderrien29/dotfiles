@@ -12,4 +12,4 @@ cd build
 make
 sudo make install
 
-sudo apt install i3status compton -y
+sudo apt install i3bar i3status compton unclutter rofi -y
