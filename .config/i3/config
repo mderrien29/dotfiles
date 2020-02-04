@@ -1,11 +1,14 @@
 # Startup apps
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
+exec --no-startup-id flashfocus
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
+exec --no-startup-id unclutter
 
 # Keybindings
 set $mod Mod4
 # change focus
+focus_wrapping no
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -17,6 +20,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
+bindsym $mod+n exec --no-startup-id flash_window
 # start a terminal
 bindsym $mod+Return exec "alacritty -e tmux"
 # firefox
@@ -43,7 +47,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
 bindsym $mod+Shift+z layout tabbed
-#bindsym $mod+Shift+e layout toggle split
+bindsym $mod+Shift+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
@@ -85,7 +89,7 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+e mode "$mode_system"
+bindsym $mod+Shift+x mode "$mode_system"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -101,8 +105,9 @@ bindsym $mod+r mode "resize"
 
 # Window
 for_window [class="^.*"] border pixel 1
-gaps inner 20
-gaps outer 10
+client.focused #555555 #555555 #ff0000 #ffa000     #ff0000
+gaps inner 10
+gaps outer 5
 smart_gaps on
 
 # Font for window titles.

@@ -13,3 +13,7 @@ make
 sudo make install
 
 sudo apt install i3bar i3status compton unclutter rofi -y
+
+# flash focus
+sudo apt-get install libxcb-render0-dev libffi-dev python-dev python-cffi
+pip3 install flashfocus

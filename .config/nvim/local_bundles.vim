@@ -1,20 +1,7 @@
-if isdirectory('/usr/local/opt/fzf')
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-endif
-let g:make = 'gmake'
-if exists('make')
-        let g:make = 'make'
-endif
-Plug 'Shougo/vimproc.vim', {'do': g:make}
-
 "" Vim-Session
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
-
 "" random
+Plug 'liuchengxu/vim-clap', { 'do': 'sudo snap install rg :Clap install-binary!' }
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -22,37 +9,37 @@ Plug 'tpope/vim-sensible'
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
-Plug 'vim-scripts/grep.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'chrisbra/colorizer'
-Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bling/vim-bufferline'
 Plug 'whiteinge/diffconflicts'
 Plug 'itchyny/vim-parenmatch'
-Plug 'christoomey/vim-conflicted'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Valloric/MatchTagAlways'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
 Plug 'Rigellute/shades-of-purple.vim'
-Plug 'sainnhe/edge'
 
 "" LANGUAGE SUPPORT
+
+" JS etc
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'burnettk/vim-angular'
 Plug 'posva/vim-vue'
 Plug 'w0rp/ale'
-Plug 'Valloric/MatchTagAlways'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
-Plug 'mzlogin/vim-markdown-toc'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'heavenshell/vim-jsdoc'
+
+" doc etc
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
+" etc
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 

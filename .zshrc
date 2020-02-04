@@ -1,6 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+
+# AWS
+export PATH=/home/martial/.local/bin:$PATH
+source /home/martial/.local/bin/aws_zsh_completer.sh
+
 # Path to your oh-my-zsh installation.
   export ZSH="/home/martial/.oh-my-zsh"
 
@@ -79,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR=vim
+export EDITOR=nvim
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -102,6 +107,8 @@ alias pop="xdg-open" # 11/07
 alias mvg="mvg -g"
 alias cpg="cpg -g"
 alias clear="clear -x"
+alias vi="nvim.appimage"
+alias vim="nvim.appimage"
 
 
 export NVM_DIR="$HOME/.nvm"

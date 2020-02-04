@@ -52,8 +52,8 @@ augroup end
 set termguicolors
 syntax enable
 let g:dracula_italic = 1
-colorscheme dracula
-let g:lightline = { 'colorscheme': 'dracula' }
+colorscheme gruvbox
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
@@ -93,3 +93,9 @@ let g:indentLine_setConceal = 0
 
 " latex
 let g:livepreview_previewer = 'firefox'
+
+" `:Clap dotfiles` to open some dotfiles quickly.
+let g:clap_provider_dotfiles = {
+      \ 'source': ['~/.config/nvim/local_init.vim', '~/.config/nvim/local_bundles.vim', '~/.config/nvim/local_mappings.vim', '~/.zshrc', '~/.tmux.conf', '~/.config/i3/config'],
+      \ 'sink': 'e',
+      \ }

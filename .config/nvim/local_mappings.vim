@@ -25,18 +25,11 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <silent> <S-t> :tabnew<CR>
 
-"" Opens an edit command with the path of the currently edited file filled in
-noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
 "" Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-"" fzf.vim
-cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>e :FZF -m<CR>
-"Recovery commands from history through FZF
-nmap <leader>y :History:<CR>
+nnoremap <silent> <leader>e :Clap files<CR>
+nnoremap <silent> <leader>f :Clap grep<CR>
 
 " Disable visualbell
 set noerrorbells visualbell t_vb=
@@ -89,8 +82,8 @@ function! s:ToggleBlame()
     endif
 endfunction
 
-nnoremap <silent> <F1> :NERDTreeToggle<CR>
-nnoremap <silent> <F2> :FZF -m<CR>
+nnoremap <silent> <F1> :Clap files<CR>
+nnoremap <silent> <F2> :Clap grep<CR>
 nnoremap <silent> <F3> :call <SID>ToggleBlame()<CR>
 " indent file and keep cursor position
 nnoremap <silent> <F4> mzgg=G`z<CR>

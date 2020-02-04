@@ -25,9 +25,9 @@ ln -sf $PWD/.config/i3/config ~/.config/i3/config
 mkdir ~/.config/compton
 ln -sf $PWD/.config/compton/compton.conf ~/.config/compton/compton.conf
 
-# i3 status
-mkdir ~/.config/i3status/
-ln -sf $PWD/.config/i3status/config ~/.config/i3status/config
+# flashfocus
+mkdir ~/.config/flashfocus
+ln -sf $PWD/.config/flashfocus/flashfocus.yml ~/.config/flashfocus/flashfocus.yml
 
 # rofi
 mkdir ~/.config/rofi
