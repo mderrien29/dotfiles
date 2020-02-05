@@ -44,6 +44,11 @@ interval=1
 min_width=CPU ...
 separator=false
 
+[temperature]
+command=$SCRIPT_DIR/temperature
+label=TEMP
+interval=10
+
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
@@ -59,37 +64,26 @@ interval=10
 #T_WARN=70
 #T_CRIT=90
 
-# Disk usage
-#
-# The directory defaults to $HOME if the instance is not specified.
-# The script may be called with a optional argument to set the alert
-# (defaults to 10 for 10%).
-[disk]
-label=DISK
-#DIR=/mnt/data
-interval=30
-separator=false
-
-
-[disk-io]
-#command=$SCRIPT_DIR/disk-io
-command=$SCRIPT_DIR/disk-io -w 2 -M -P 0
-interval=persist
+[usb]
+command=$SCRIPT_DIR/usb
 markup=pango
-label=IO
-#instance=/^sda/
-#DT=5
-#MB_ONLY=0 #0 or 1
-#KB_ONLY=0 #0 or 1
-#WIDTH=4
-#MB_PRECISION=1
-#KB_PRECISION=0
-#REGEX=/^(s|h)d[a-zA-Z]+/
-#THRESHOLD=0
-#WARN_COLOR="#FF0000"
-#SEPARATOR=/
-#PREFIX=
-#SUFFIX="B/s"
+signal=1
+interval=10
+label=
+#IGNORE_LIST=[]
+#IGNORE_LIST=["sdd1", "mapper/sda1_crypt"]
+#INFO_TEXT_COLOR=white
+#MOUNTED_COLOR=green
+#PLUGGED_COLOR=gray
+#LOCKED_COLOR=gray
+#UNLOCKED_NOT_MOUNTED_COLOR=yellow
+#PARTITIONLESS_COLOR=red
+#PARTITIONLESS_TEXT=no partitions
+#SEPARATOR=<span color='gray'> | </span>
+#LOCKED_INDICATOR= 
+#UNLOCKED_INDICATOR= 
+#READONLY_INDICATOR=ro
+#TRUNCATE_FS_LABELS=[not set by default, accepts +/- integers]
 
 [bandwidth3]
 command=$SCRIPT_DIR/bandwidth3
