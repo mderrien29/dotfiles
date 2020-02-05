@@ -50,7 +50,11 @@ label=♪
 interval=once
 signal=10
 #STEP=5%
+separator=false
 
+[microphone]
+label=
+interval=5
 
 # Network interface monitoring
 #
@@ -61,7 +65,9 @@ signal=10
 label=E:
 #color=#00FF00
 interval=10
-separator=true
+
+[bluetooth]
+label=BT
 
 [apt-upgrades]
 command=$SCRIPT_DIR/apt-upgrades
@@ -104,6 +110,10 @@ label=
 #datefmt=+%H:+%M:+%S
 #height=180
 #width=220
+
+[user]
+label=
+interval=once
 
 [shutdown_menu]
 full_text=system
