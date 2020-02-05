@@ -55,27 +55,38 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+q focus parent
 # workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+set $WS1 "1:1.Zeus"
+set $WS2 "2:2.Hades"
+set $WS3 "3:3.Poseidon"
+set $WS4 "4:4.Hera"
+set $WS5 "5:5.Demeter"
+set $WS6 "6:6.Hestia"
+set $WS7 "7:7.Athena"
+set $WS8 "8:8.Thetis"
+set $WS9 "9:9.Ares"
+set $WS10 "10:10.Hermes"
+
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS10
+# move focused container to workspac$WSe
+bindsym $mod+Shift+1 move container to workspace $WS1
+bindsym $mod+Shift+2 move container to workspace $WS2
+bindsym $mod+Shift+3 move container to workspace $WS3
+bindsym $mod+Shift+4 move container to workspace $WS4
+bindsym $mod+Shift+5 move container to workspace $WS5
+bindsym $mod+Shift+6 move container to workspace $WS6
+bindsym $mod+Shift+7 move container to workspace $WS7
+bindsym $mod+Shift+8 move container to workspace $WS8
+bindsym $mod+Shift+9 move container to workspace $WS9
+bindsym $mod+Shift+0 move container to workspace $WS10
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
@@ -113,16 +124,16 @@ smart_gaps on
 # Font for window titles.
 font pango:DejaVu Sans Mono 9
 
-# Plasma
-# Don’t treat Plasma pop-ups as full-sized windows
-for_window [class="plasmashell"] floating enable
-# Don’t spawn an empty window for the Plasma Desktop
-for_window [title="Desktop — Plasma"] kill, floating enable, border none
-# Don’t let notifications and non-interactive pop-up windows steal focus
-no_focus [class="plasmashell" window_type="notification"]
-no_focus [class="plasmashell" window_type="on_screen_display"]
+for_window [class="Yad"] floating enable
 
 bar {
-  status_command i3status
+  status_command SCRIPT_DIR=/home/martial/.config/i3blocks i3blocks -c ~/.config/i3blocks/config.top
+  strip_workspace_numbers yes
   position top
+}
+
+bar {
+  status_command SCRIPT_DIR=/home/martial/.config/i3blocks i3blocks -c ~/.config/i3blocks/config.bot
+  workspace_buttons no
+  position bottom
 }
