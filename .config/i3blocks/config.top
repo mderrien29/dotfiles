@@ -47,7 +47,7 @@ signal=10
 [volume]
 label=♪
 #label=VOL
-interval=once
+interval=5
 signal=10
 #STEP=5%
 separator=false
@@ -55,6 +55,12 @@ separator=false
 [microphone]
 label=
 interval=5
+
+[wifi]
+#INTERFACE=wlp3s0
+label=W:
+interval=10
+separator=false
 
 # Network interface monitoring
 #
@@ -66,19 +72,11 @@ label=E:
 #color=#00FF00
 interval=10
 
-[bluetooth]
-label=BT
-
 [apt-upgrades]
 command=$SCRIPT_DIR/apt-upgrades
 signal=1
-interval=once
+interval=3600
 
-[wifi]
-#INTERFACE=wlp3s0
-label=W:
-interval=10
-separator=false
 
 [kbdd_layout]
 command=$SCRIPT_DIR/kbdd_layout

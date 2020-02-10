@@ -52,8 +52,8 @@ augroup end
 set termguicolors
 syntax enable
 let g:dracula_italic = 1
-colorscheme gruvbox
-let g:lightline = { 'colorscheme': 'gruvbox' }
+colorscheme shades_of_purple
+let g:lightline = { 'colorscheme': 'shades_of_purple' }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
@@ -99,3 +99,10 @@ let g:clap_provider_dotfiles = {
       \ 'source': ['~/.config/nvim/local_init.vim', '~/.config/nvim/local_bundles.vim', '~/.config/nvim/local_mappings.vim', '~/.zshrc', '~/.tmux.conf', '~/.config/i3/config'],
       \ 'sink': 'e',
       \ }
+
+
+"*****************************************************************************
+"" Commands
+"*****************************************************************************
+" remove trailing whitespaces
+command! FixWhitespace :%s/\s\+$//e

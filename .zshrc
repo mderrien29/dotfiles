@@ -44,7 +44,7 @@ ZSH_THEME="sunrise"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -163,13 +163,14 @@ function zle-keymap-select zle-line-init {
 }
 zle -N zle-keymap-select
 
-# Use beam shape cursor on startup.
-echo -ne '\e[5 q'
+# # Use beam shape cursor on startup.
+# echo -ne '\e[5 q'
 
 # Use beam shape cursor for each new prompt.
 preexec() {
    echo -ne '\e[5 q'
 }
+
 
 # Better searching in command mode
 bindkey -M vicmd '?' history-incremental-search-backward
@@ -185,4 +186,5 @@ bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
 
 # Make Vi mode transitions faster (KEYTIMEOUT is in hundredths of a second)
-export KEYTIMEOUT=5
+export KEYTIMEOUT=1
+

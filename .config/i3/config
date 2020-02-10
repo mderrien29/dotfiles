@@ -1,9 +1,7 @@
 # Startup apps
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
-exec --no-startup-id flashfocus
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
-exec --no-startup-id unclutter
 
 # Keybindings
 set $mod Mod4
@@ -116,13 +114,13 @@ bindsym $mod+r mode "resize"
 
 # Window
 for_window [class="^.*"] border pixel 1
-client.focused #555555 #555555 #ff0000 #ffa000     #ff0000
+client.focused #555555 #555555 #ffffff #0000ff #ffffff
 gaps inner 10
 gaps outer 5
 smart_gaps on
 
 # Font for window titles.
-font pango:DejaVu Sans Mono 9
+font pango:DejaVu Sans Mono 11
 
 for_window [class="Yad"] floating enable
 

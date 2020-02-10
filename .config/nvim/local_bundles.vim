@@ -15,9 +15,9 @@ Plug 'chrisbra/colorizer'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'bling/vim-bufferline'
 Plug 'whiteinge/diffconflicts'
-Plug 'itchyny/vim-parenmatch'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Valloric/MatchTagAlways'
+Plug 'rickhowe/diffchar.vim'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }

@@ -90,3 +90,21 @@ nnoremap <silent> <F4> mzgg=G`z<CR>
 
 " pasting in visual mode will replace selection
 xnoremap p "_dP
+
+"*****************************************************************************
+"" Abbreviations
+"*****************************************************************************
+"" no one is really happy until you have this shortcuts
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
+" terminal emulation
+nnoremap <silent> <leader>sh :terminal<CR>
