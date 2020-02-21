@@ -22,9 +22,9 @@ bindsym $mod+n exec --no-startup-id flash_window
 # start a terminal
 bindsym $mod+Return exec "alacritty -e tmux"
 # firefox
-bindsym $mod+Shift+Return exec firefox
+bindsym $mod+Shift+Return exec qutebrowser
 # picture-in-picture
-bindsym $mod+c exec "i3-msg 'floating toggle; sticky toggle; resize shrink width 10000px; resize grow width 300px; resize shrink height 10000px; resize grow height 180px;move position 10px 10px;'"
+bindsym $mod+c exec "i3-msg 'floating toggle; sticky toggle; resize set 640 360;move position 10px 10px;'"
 # kill focused window
 bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
@@ -56,9 +56,9 @@ bindsym $mod+q focus parent
 set $WS1 "1:1.Zeus"
 set $WS2 "2:2.Hades"
 set $WS3 "3:3.Poseidon"
-set $WS4 "4:4.Hera"
+set $WS4 "4:4.Hestia"
 set $WS5 "5:5.Demeter"
-set $WS6 "6:6.Hestia"
+set $WS6 "6:6.Hera"
 set $WS7 "7:7.Athena"
 set $WS8 "8:8.Thetis"
 set $WS9 "9:9.Ares"
@@ -114,7 +114,7 @@ bindsym $mod+r mode "resize"
 
 # Window
 for_window [class="^.*"] border pixel 1
-client.focused #555555 #555555 #ffffff #0000ff #ffffff
+client.focused #555555 #555555 #ffffff #000000 #ffffff
 gaps inner 10
 gaps outer 5
 smart_gaps on
