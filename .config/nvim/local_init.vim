@@ -1,6 +1,11 @@
 syntax sync minlines=2000
 autocmd BufEnter * :syntax sync fromstart
 
+if has('persistent_undo')      "check if your vim version supports it
+  set undofile                 "turn on the feature  
+  set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+  endif     
+
 set mouse=a
 
 " fzf ?
@@ -26,7 +31,6 @@ set autoread
 " relative line numbers
 set nu rnu
 
-"let g:loaded_matchparen=1
 set cursorline
 
 ""tabs
@@ -40,6 +44,8 @@ setlocal foldmethod=syntax
 set nofoldenable
 set foldlevel=100 "weird behavior with first zc"
 
+let g:loaded_matchparen=1
+
 augroup jsFolds
     autocmd!
     autocmd FileType javascript,typescript,json syntax region braceFold start="{" end="}" transparent fold
@@ -51,9 +57,8 @@ augroup end
 "" Color
 set termguicolors
 syntax enable
-let g:dracula_italic = 1
-colorscheme shades_of_purple
-let g:lightline = { 'colorscheme': 'shades_of_purple' }
+colorscheme gruvbox
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'

@@ -39,7 +39,7 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
-" etc
+" OPS
 Plug 'martinda/Jenkinsfile-vim-syntax'
-
+Plug 'hashivim/vim-terraform'
 
