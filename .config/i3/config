@@ -2,6 +2,8 @@
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id setxkbmap -layout us -variant altgr-intl
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
+exec --no-startup-id nm-applet &
+exec --no-startup-id blueman-applet &
 
 # Keybindings
 set $mod Mod4
@@ -28,7 +30,7 @@ bindsym $mod+c exec "i3-msg 'floating toggle; sticky toggle; resize set 640 360;
 # kill focused window
 bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show drun -show-icons
+bindsym $mod+d exec rofi -show drun -show-icons -theme gruvbox-dark-soft
 bindsym Print exec scrot $HOME/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
