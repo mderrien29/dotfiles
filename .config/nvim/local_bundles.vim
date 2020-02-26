@@ -18,6 +18,7 @@ Plug 'whiteinge/diffconflicts'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Valloric/MatchTagAlways'
 Plug 'rickhowe/diffchar.vim'
+Plug 'whiteinge/diffconflicts'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }

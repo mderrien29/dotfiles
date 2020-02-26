@@ -4,6 +4,7 @@ rofi.padding: 200
 rofi.bw: 0
 rofi.separator-style: none
 rofi.hide-scrollbar: true
+rofi.fullscreen: true;
 
 rofi.font: System San Francisco Display 18
 
