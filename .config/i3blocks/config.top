@@ -72,15 +72,9 @@ label=E:
 #color=#00FF00
 interval=10
 
-[apt-upgrades]
-command=$SCRIPT_DIR/apt-upgrades
-signal=1
-interval=3600
-
-
-[kbdd_layout]
-command=$SCRIPT_DIR/kbdd_layout
-interval=persist
+# [kbdd_layout]
+# command=$SCRIPT_DIR/kbdd_layout
+# interval=persist
 
 [batterybar]
 command=$SCRIPT_DIR/batterybar
@@ -114,7 +108,7 @@ label=
 interval=once
 
 [shutdown_menu]
-full_text=system
+full_text=
 # If you are using FontAwesome, we recommend the power-off icon:
 # http://fontawesome.io/icon/power-off/
 command=$SCRIPT_DIR/shutdown_menu

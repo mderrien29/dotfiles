@@ -20,8 +20,6 @@ alias pop="xdg-open" # 11/07
 alias mvg="mvg -g"
 alias cpg="cpg -g"
 alias clear="clear -x"
-alias vi="nvim.appimage"
-alias vim="nvim.appimage"
 
 export TERM=xterm-256color
 

@@ -90,6 +90,11 @@ markup=pango
 # Exposed variables: rx, wx, tx, unit, iface
 #PRINTF_COMMAND=printf "${LABEL}%-5.1f/%5.1f %s/s\n", rx, wx, unit;
 
+[apt-upgrades]
+command=$SCRIPT_DIR/apt-upgrades
+signal=1
+interval=3600
+
 # OpenVPN support
 #
 # Support multiple VPN, with colors.
