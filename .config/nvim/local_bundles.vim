@@ -1,6 +1,6 @@
 "" Vim-Session
 "" random
-Plug 'liuchengxu/vim-clap', { 'do': 'sudo snap install rg :Clap install-binary!' }
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
@@ -19,6 +19,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Valloric/MatchTagAlways'
 Plug 'rickhowe/diffchar.vim'
 Plug 'whiteinge/diffconflicts'
+"Plug 'camspiers/animate.vim'
+Plug 'camspiers/lens.vim'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }

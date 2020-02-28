@@ -111,3 +111,17 @@ let g:clap_provider_dotfiles = {
 "*****************************************************************************
 " remove trailing whitespaces
 command! FixWhitespace :%s/\s\+$//e
+
+function! s:ensure_closed() abort
+  call clap#floating_win#close()
+  silent! autocmd! ClapEnsureAllClosed
+endfunction
+
+function! MyClapOnEnter() abort
+  augroup ClapEnsureAllClosed
+    autocmd!
+    autocmd BufEnter,WinEnter,WinLeave * call s:ensure_closed()
+  augroup END
+endfunction
+
+autocmd User ClapOnEnter call MyClapOnEnter()
