@@ -41,7 +41,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #i
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 # file explorer ranger
-bindsym $mod+e exec alacritty -e ranger
+bindsym $mod+e exec nautilus
 # split in horizontal orientation
 bindsym $mod+s split h
 # split in vertical orientation
@@ -94,6 +94,11 @@ bindsym $mod+Shift+0 move container to workspace $WS10
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
+bindsym $mod+Control+h resize shrink width 10 px or 10 ppt
+bindsym $mod+Control+j resize grow height 10 px or 10 ppt
+bindsym $mod+Control+k resize shrink height 10 px or 10 ppt
+bindsym $mod+Control+l resize grow width 10 px or 10 ppt
+
 set $mode_system System (l) lock, (Shift+e) logout, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3lock
@@ -105,18 +110,6 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Shift+x mode "$mode_system"
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-  bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+r mode "resize"
 
 # Window
 #for_window [class="^.*"] border pixel 1
@@ -135,17 +128,18 @@ client.focused          $border-color       $bg-color          $text-color      
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
-#gaps inner 10
-#gaps outer 5
-#smart_gaps on
+# gaps inner 10
+# gaps outer 5
+# smart_gaps on
 
 # Font for window titles.
-font pango:DejaVu Sans Mono 11
+font pango:DejaVu Sans Mono 10
 
 bar {
   status_command SCRIPT_DIR=/home/martial/.config/i3blocks i3blocks -c ~/.config/i3blocks/config.top
   strip_workspace_numbers yes
   position top
+  tray_output none
 }
 
 bar {
