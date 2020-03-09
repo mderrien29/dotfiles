@@ -24,8 +24,6 @@ Plug 'camspiers/lens.vim'
 
 " colorscheme
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'morhetz/gruvbox'
-Plug 'Rigellute/shades-of-purple.vim'
 
 "" LANGUAGE SUPPORT
 
