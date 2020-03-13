@@ -1,4 +1,3 @@
-export TERM=tmux-256color
 export ZSH="/home/martial/.oh-my-zsh"
 ZSH_THEME="kolo"
 COMPLETION_WAITING_DOTS="true"
