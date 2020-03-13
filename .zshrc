@@ -1,3 +1,4 @@
+export TERM=tmux-256color
 export ZSH="/home/martial/.oh-my-zsh"
 ZSH_THEME="kolo"
 COMPLETION_WAITING_DOTS="true"
@@ -20,8 +21,6 @@ alias pop="xdg-open" # 11/07
 alias mvg="mvg -g"
 alias cpg="cpg -g"
 alias clear="clear -x"
-
-export TERM=xterm-256color
 
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }

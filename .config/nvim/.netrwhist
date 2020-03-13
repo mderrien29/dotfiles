@@ -1,7 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/martial/.config/alacritty'
+let g:netrw_dirhist_0='/media/sf_shared'
+let g:netrw_dirhist_9='/home/martial/Documents/kering/pos-facade-xcenter/config'
+let g:netrw_dirhist_8='/home/martial/Documents/kering/pos-facade-xcenter/src'
+let g:netrw_dirhist_7='/home/martial/Documents/kering/soa-deploy/stages/qa/eu-west-1/apps/pos_facade_xcenter'
+let g:netrw_dirhist_6='/home/martial/Documents/dotfiles/install/i3-gaps'
 let g:netrw_dirhist_5='/home/martial/Documents/perso/test/index.ts'
 let g:netrw_dirhist_4='/home/martial/Documents/dotfiles/.config/i3blocks'
 let g:netrw_dirhist_3='/home/martial/Documents/kering/web2caseconsumer-node/kafkaDevMode'
 let g:netrw_dirhist_2='/home/martial/.config/alacritty'
-let g:netrw_dirhist_1='/home/martial/Documents/kering/web2case/web2caseconsumer-node/kafkaDevMode'

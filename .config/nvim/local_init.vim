@@ -55,10 +55,13 @@ augroup jsFolds
 augroup end
 
 "" Color
+execute "set t_8f=\e[38;2;%lu;%lu;%lum"
+execute "set t_8b=\e[48;2;%lu;%lu;%lum"
 set termguicolors
+"let g:dracula_colorterm = 0
 syntax enable
-colorscheme gruvbox
-let g:lightline = { 'colorscheme': 'gruvbox' }
+colorscheme dracula
+let g:lightline = { 'colorscheme': 'dracula' }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
