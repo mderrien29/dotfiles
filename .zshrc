@@ -58,8 +58,8 @@ starttransfer:  %{time_starttransfer}s\n\
 }
 
 # AWS
-export PATH=/home/martial/.local/bin:$PATH
-source /home/martial/.local/bin/aws_zsh_completer.sh
+# export PATH=/home/martial/.local/bin:$PATH
+# source /home/martial/.local/bin/aws_zsh_completer.sh
 
 #nvm
 export NVM_DIR="$HOME/.nvm"
