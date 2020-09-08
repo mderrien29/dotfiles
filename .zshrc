@@ -1,9 +1,9 @@
 export TERM=tmux-256color
 export ZSH="/home/martial/.oh-my-zsh"
-ZSH_THEME="kolo"
+ZSH_THEME="sunrise"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git zsh-autosuggestions zsh-vim-mode vi-mode )
+plugins=(git zsh-autosuggestions zsh-vim-mode )
 source $ZSH/oh-my-zsh.sh
 
 MODE_CURSOR_VICMD="green block"
@@ -21,6 +21,8 @@ alias pop="xdg-open" # 11/07
 alias mvg="mvg -g"
 alias cpg="cpg -g"
 alias clear="clear -x"
+alias :q=exit
+alias adog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
 tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
@@ -57,7 +59,7 @@ starttransfer:  %{time_starttransfer}s\n\
 }
 
 # AWS
-export PATH=/home/martial/.local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 source /home/martial/.local/bin/aws_zsh_completer.sh
 
 #nvm
