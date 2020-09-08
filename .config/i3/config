@@ -22,7 +22,7 @@ bindsym $mod+Shift+l move right
 floating_modifier $mod
 bindsym $mod+n exec --no-startup-id flash_window
 # start a terminal
-bindsym $mod+Return exec "alacritty -e tmux"
+bindsym $mod+Return exec "LIBGL_ALWAYS_SOFTWARE=1 alacritty -e tmux"
 # firefox
 bindsym $mod+Shift+Return exec firefox
 # picture-in-picture
@@ -35,7 +35,7 @@ bindsym button3 floating toggle
 # start dmenu (a program launcher)
 #bindsym $mod+d exec exec dmenu_run
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym Print exec scrot $HOME/Pictures/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym Print exec scrot
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
