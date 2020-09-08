@@ -23,13 +23,17 @@ nnoremap <leader>sc :CloseSession<CR>
 "" Tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
-nnoremap <silent> <S-t> :tabnew<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
 
 "" Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+" Clap (fuzzy finder)
 nnoremap <silent> <leader>e :Clap files<CR>
 nnoremap <silent> <leader>f :Clap grep<CR>
+nnoremap <silent> <C-p> :Clap files<CR>
+nnoremap <silent> <C-o> :Clap grep<CR>
 
 " Disable visualbell
 set noerrorbells visualbell t_vb=
@@ -41,16 +45,6 @@ endif
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
-
-noremap YY "+y<CR>
-noremap <leader>p "+gP<CR>
-noremap XX "+x<CR>
-
-"" Buffer nav
-noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
 
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
@@ -75,21 +69,22 @@ nnoremap n nzzzv
 nnoremap N Nzzzv
 
 function! s:ToggleBlame()
-    if &l:filetype ==# 'fugitiveblame'
-        close
-    else
-        Gblame
-    endif
+  if &l:filetype ==# 'fugitiveblame'
+    close
+  else
+    Gblame
+  endif
 endfunction
 
 nnoremap <silent> <F1> :Clap files<CR>
 nnoremap <silent> <F2> :Clap grep<CR>
 nnoremap <silent> <F3> :call <SID>ToggleBlame()<CR>
-" indent file and keep cursor position
-nnoremap <silent> <F4> mzgg=G`z<CR>
 
 " pasting in visual mode will replace selection
 xnoremap p "_dP
+
+" indent file and keep cursor position
+nnoremap <silent> <leader>i mzgg=G`z<CR>
 
 "*****************************************************************************
 "" Abbreviations
@@ -108,3 +103,5 @@ cnoreabbrev Qall qall
 
 " terminal emulation
 nnoremap <silent> <leader>sh :terminal<CR>
+
+nmap <leader>qf  <Plug>(coc-fix-current)

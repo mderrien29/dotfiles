@@ -58,10 +58,9 @@ augroup end
 execute "set t_8f=\e[38;2;%lu;%lu;%lum"
 execute "set t_8b=\e[48;2;%lu;%lu;%lum"
 set termguicolors
-"let g:dracula_colorterm = 0
 syntax enable
-colorscheme dracula
-let g:lightline = { 'colorscheme': 'dracula' }
+colorscheme shades_of_purple
+let g:lightline = { 'colorscheme': 'shades_of_purple' }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
