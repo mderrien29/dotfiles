@@ -59,8 +59,9 @@ execute "set t_8f=\e[38;2;%lu;%lu;%lum"
 execute "set t_8b=\e[48;2;%lu;%lu;%lum"
 set termguicolors
 syntax enable
-colorscheme shades_of_purple
-let g:lightline = { 'colorscheme': 'shades_of_purple' }
+set background=light
+colorscheme gruvbox
+let g:lightline = { 'colorscheme': 'gruvbox' }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'

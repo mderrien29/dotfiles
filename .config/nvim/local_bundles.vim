@@ -22,10 +22,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kshenoy/vim-signature'
 
 " visual 
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'Rigellute/shades-of-purple.vim'
 Plug 'morhetz/gruvbox'
-Plug 'fxn/vim-monochrome'
 
 "" LANGUAGE SUPPORT
 
