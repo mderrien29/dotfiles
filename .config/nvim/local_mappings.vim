@@ -24,7 +24,7 @@ nnoremap <leader>sc :CloseSession<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <C-t> :tabnew<CR>
-nnoremap <C-w> :tabclose<CR>
+"nnoremap <C-w> :tabclose<CR>
 
 "" Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
@@ -41,9 +41,9 @@ if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
 
-"" Copy/Paste/Cut
 if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
+" Copy/Paste/Cut
+ set clipboard=unnamed,unnamedplus
 endif
 
 "" Clean search (highlight)
@@ -76,9 +76,10 @@ function! s:ToggleBlame()
   endif
 endfunction
 
-nnoremap <silent> <F1> :Clap files<CR>
-nnoremap <silent> <F2> :Clap grep<CR>
-nnoremap <silent> <F3> :call <SID>ToggleBlame()<CR>
+nnoremap <silent> <F1> :NERDTreeToggle<CR>
+nnoremap <silent> <F2> :Clap files<CR>
+nnoremap <silent> <F3> :Clap grep<CR>
+nnoremap <silent> <F4> :call <SID>ToggleBlame()<CR>
 
 " pasting in visual mode will replace selection
 xnoremap p "_dP

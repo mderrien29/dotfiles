@@ -22,7 +22,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'kshenoy/vim-signature'
 
 " visual 
+Plug 'Rigellute/shades-of-purple.vim'
 Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 
 "" LANGUAGE SUPPORT
 
@@ -35,9 +37,9 @@ Plug 'w0rp/ale'
 "Plug 'heavenshell/vim-jsdoc'
 
 " doc etc
-"Plug 'mzlogin/vim-markdown-toc'
-"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
-"Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+" Plug 'mzlogin/vim-markdown-toc'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " OPS
 Plug 'martinda/Jenkinsfile-vim-syntax'

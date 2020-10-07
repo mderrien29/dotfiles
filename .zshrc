@@ -3,7 +3,7 @@ export ZSH="/home/martial/.oh-my-zsh"
 ZSH_THEME="sunrise"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git zsh-autosuggestions zsh-vim-mode )
+plugins=(git zsh-autosuggestions zsh-vim-mode vi-mode )
 source $ZSH/oh-my-zsh.sh
 
 MODE_CURSOR_VICMD="green block"
