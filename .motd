@@ -1,1 +1,4 @@
 echo "Hello Martial, welcome back"
+echo ""
+fortune -s
+echo ""
