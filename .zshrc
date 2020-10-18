@@ -59,6 +59,10 @@ starttransfer:  %{time_starttransfer}s\n\
     --location --request POST $1 
 }
 
+dict() {
+  curl dict://dict.org/d:$1
+}
+
 if test -f $HOME/.local/bin/aws; then
   export PATH=/home/martial/.local/bin:$PATH
   source /home/martial/.local/bin/aws_zsh_completer.sh
