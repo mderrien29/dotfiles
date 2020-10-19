@@ -35,6 +35,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 "Plug 'posva/vim-vue'
 Plug 'w0rp/ale'
 "Plug 'heavenshell/vim-jsdoc'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 " doc etc
 " Plug 'mzlogin/vim-markdown-toc'

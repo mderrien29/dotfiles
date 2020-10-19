@@ -29,32 +29,41 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-# Generic media player support
-#
-# This displays "ARTIST - SONG" if a music is playing.
-# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-[mediaplayer]
-instance=spotify
-interval=5
-signal=10
 
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
+[docker]
+color=#0db7ed
+interval=10
+label=🐳
 
-[volume]
-label=♪
-#label=VOL
-interval=5
-signal=10
-#STEP=5%
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[cpu_usage]
+label=CPU
+interval=1
+min_width=CPU ...
 separator=false
 
-[microphone]
-label=
-interval=5
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=RAM
+interval=10
+
+
+
+[bandwidth3]
+command=$SCRIPT_DIR/bandwidth3
+interval=persist
+label=NETWORK
+markup=pango
+#IFACE=[automatically determined]
+#DT=3
+#UNIT=Mb
+# Exposed variables: rx, wx, tx, unit, iface
+#PRINTF_COMMAND=printf "${LABEL}%-5.1f/%5.1f %s/s\n", rx, wx, unit;
 
 [wifi]
 #INTERFACE=wlp3s0
@@ -95,6 +104,34 @@ min_width=■■■■■
 #FULL_COLOR=#FFFFFF
 #AC_COLOR=#535353
 
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+[mediaplayer]
+instance=spotify
+interval=5
+signal=10
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+
+[volume]
+label=♪
+#label=VOL
+interval=5
+signal=10
+#STEP=5%
+separator=false
+
+[microphone]
+label=
+interval=5
+
+
 [calendar]
 command=$SCRIPT_DIR/calendar
 interval=1
@@ -103,9 +140,15 @@ label=
 #height=180
 #width=220
 
+[apt-upgrades]
+command=$SCRIPT_DIR/apt-upgrades
+signal=1
+interval=3600
+
 [user]
 label=
 interval=once
+
 
 [shutdown_menu]
 full_text=
