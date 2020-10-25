@@ -76,6 +76,6 @@ if test -f $HOME/.nvm/nvm.sh; then
 fi
 
 if test -f $HOME/.motd; then
-  ./.motd
+  $HOME/.motd
 fi
 

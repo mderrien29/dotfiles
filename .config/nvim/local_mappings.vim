@@ -106,3 +106,7 @@ cnoreabbrev Qall qall
 nnoremap <silent> <leader>sh :terminal<CR>
 
 nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <silent> ge <Plug>(coc-definition)
+nmap <silent> gs :sp<CR><Plug>(coc-definition)
+nmap <silent> gv :vsp<CR><Plug>(coc-definition)
+nmap <silent> gt :vsp<CR><Plug>(coc-definition)<C-W>T

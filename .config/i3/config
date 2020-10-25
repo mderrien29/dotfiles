@@ -59,16 +59,16 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+q focus parent
 # workspace
-set $WS1 "1:1.Zeus"
-set $WS2 "2:2.Hades"
-set $WS3 "3:3.Poseidon"
-set $WS4 "4:4.Hestia"
-set $WS5 "5:5.Demeter"
-set $WS6 "6:6.Hera"
-set $WS7 "7:7.Athena"
-set $WS8 "8:8.Thetis"
-set $WS9 "9:9.Ares"
-set $WS10 "10:10.Hermes"
+set $WS1 "1:unan"
+set $WS2 "2:daou"
+set $WS3 "3:tri"
+set $WS4 "4:pevar"
+set $WS5 "5:pemp"
+set $WS6 "6:c'hwec'h"
+set $WS7 "7:seizh"
+set $WS8 "8:eizh"
+set $WS9 "9:nav"
+set $WS10 "10:dek"
 
 bindsym $mod+1 workspace $WS1
 bindsym $mod+2 workspace $WS2
@@ -112,7 +112,7 @@ mode "$mode_system" {
 bindsym $mod+Shift+x mode "$mode_system"
 
 # Window
-#for_window [class="^.*"] border pixel 1
+# for_window [class="^.*"] border pixel 1
 set $bg-color            #444444
 set $border-color        #444444
 set $indicator-color     #bbbbbb
@@ -128,12 +128,12 @@ client.focused          $border-color       $bg-color          $text-color      
 client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
-# gaps inner 10
-# gaps outer 5
+# gaps inner 8
+# gaps outer 4
 # smart_gaps on
 
 # Font for window titles.
-font pango:DejaVu Sans Mono 10
+font pango:Fira Mono 10
 
 bar {
   status_command SCRIPT_DIR=/home/martial/.config/i3blocks i3blocks -c ~/.config/i3blocks/config.top
@@ -142,8 +142,8 @@ bar {
   tray_output none
 }
 
-bar {
-  status_command SCRIPT_DIR=/home/martial/.config/i3blocks i3blocks -c ~/.config/i3blocks/config.bot
-  workspace_buttons no
-  position bottom
-}
+# bar {
+#   status_command SCRIPT_DIR=/home/martial/.config/i3blocks i3blocks -c ~/.config/i3blocks/config.bot
+#   workspace_buttons no
+#   position bottom
+# }
