@@ -59,8 +59,23 @@ set termguicolors
 syntax enable
 set background=light
 let g:gruvbox_italic = 1
-colorscheme gruvbox
-let g:lightline = { 'colorscheme': 'gruvbox' }
+colorscheme PaperColor
+let g:lightline = {
+  \ 'colorscheme': 'PaperColor',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'tabline': {
+  \   'left': [ ['buffers'] ],
+  \   'right': [ ['close'] ]
+  \ },
+  \ 'component_expand': {
+  \   'buffers': 'lightline#bufferline#buffers'
+  \ },
+  \ 'component_type': {
+  \   'buffers': 'tabsel'
+  \ }
+\ }
 
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
@@ -99,7 +114,7 @@ let g:ale_lint_delay = 1000
 let g:indentLine_setConceal = 0
 
 " latex
-let g:livepreview_previewer = 'firefox'
+let g:livepreview_previewer = 'alacritty'
 
 " `:Clap dotfiles` to open some dotfiles quickly.
 let g:clap_provider_dotfiles = {
@@ -196,10 +211,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
