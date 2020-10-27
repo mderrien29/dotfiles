@@ -63,6 +63,10 @@ dict() {
   curl dict://dict.org/d:$1
 }
 
+help() {
+  curl cheat.sh/$1
+}
+
 if test -f $HOME/.local/bin/aws; then
   export PATH=/home/martial/.local/bin:$PATH
   source /home/martial/.local/bin/aws_zsh_completer.sh
@@ -78,4 +82,5 @@ fi
 if test -f $HOME/.motd; then
   $HOME/.motd
 fi
+
 
