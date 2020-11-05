@@ -63,7 +63,7 @@ colorscheme PaperColor
 let g:lightline = {
   \ 'colorscheme': 'PaperColor',
   \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+  \   'left': [ [ 'mode', 'paste' ], [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
   \ },
   \ 'tabline': {
   \   'left': [ ['buffers'] ],
@@ -74,6 +74,9 @@ let g:lightline = {
   \ },
   \ 'component_type': {
   \   'buffers': 'tabsel'
+  \ },
+  \ 'component_function': {
+  \   'cocstatus': 'coc#status'
   \ }
 \ }
 
@@ -277,3 +280,12 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+set nrformats=hex
+
+" hide the status line
+set cmdheight=1
+set laststatus=1
+set noshowmode
+set noshowcmd
+set shortmess+=F

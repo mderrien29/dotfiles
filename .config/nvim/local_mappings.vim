@@ -107,4 +107,4 @@ nnoremap <silent> <leader>sh :terminal<CR>
 
 nmap <leader>qf  <Plug>(coc-fix-current)
 nmap <silent> ge <Plug>(coc-definition)
-nmap <silent> gs :vsp<CR><Plug>(coc-definition)
+nmap <silent> gs :bel vsp<CR><Plug>(coc-definition)

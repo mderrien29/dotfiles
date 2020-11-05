@@ -19,6 +19,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rickhowe/diffchar.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kshenoy/vim-signature'
+Plug 'triglav/vim-visual-increment'
 
 " visual 
 Plug 'Rigellute/shades-of-purple.vim'
