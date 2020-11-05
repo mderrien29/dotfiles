@@ -1,4 +1,4 @@
-echo "Hello Martial, welcome back"
+echo "Hello $(whoami), welcome back to $(hostname)"
 echo ""
-fortune -s
+fortune -s -n 320
 echo ""

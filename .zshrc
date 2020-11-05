@@ -84,4 +84,7 @@ if test -f $HOME/.motd; then
   $HOME/.motd
 fi
 
-
+if test -f .todo; then
+  cat .todo
+  echo ""
+fi
