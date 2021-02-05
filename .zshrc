@@ -5,6 +5,8 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git zsh-autosuggestions zsh-vim-mode vi-mode )
 source $ZSH/oh-my-zsh.sh
 
+export TMPDIR="/tmp"
+
 MODE_CURSOR_VICMD="green block"
 MODE_CURSOR_VIINS="#20d08a blinking bar"
 MODE_CURSOR_SEARCH="#ff00ff steady underline"
@@ -23,7 +25,6 @@ alias clear="clear -x" # potential security issue but w/e
 alias :q=exit
 alias adog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias vi=nvim
-eval $(thefuck --alias)
 
 # transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi

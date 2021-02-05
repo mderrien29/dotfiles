@@ -41,7 +41,7 @@ filetype plugin indent on
 
 "" fold
 setlocal foldmethod=syntax
-set nofoldenable
+" set nofoldenable
 set foldlevel=100 "weird behavior with first zc"
 
 let g:loaded_matchparen=1
@@ -57,11 +57,11 @@ augroup end
 "" Color
 set termguicolors
 syntax enable
-set background=light
+set background=dark
 let g:gruvbox_italic = 1
-colorscheme PaperColor
+colorscheme shades_of_purple
 let g:lightline = {
-  \ 'colorscheme': 'PaperColor',
+  \ 'colorscheme': 'shades_of_purple',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ], [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
   \ },
@@ -289,3 +289,5 @@ set laststatus=1
 set noshowmode
 set noshowcmd
 set shortmess+=F
+
+let g:clap_theme = 'material_design_dark'

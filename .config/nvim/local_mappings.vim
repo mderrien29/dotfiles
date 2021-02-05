@@ -30,9 +30,9 @@ nnoremap <C-t> :tabnew<CR>
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Clap (fuzzy finder)
-nnoremap <silent> <leader>e :Clap files<CR>
+nnoremap <silent> <leader>e :Clap gfiles<CR>
 nnoremap <silent> <leader>f :Clap grep<CR>
-nnoremap <silent> <C-p> :Clap files<CR>
+nnoremap <silent> <C-p> :Clap gfiles<CR>
 nnoremap <silent> <C-o> :Clap grep<CR>
 
 " Disable visualbell

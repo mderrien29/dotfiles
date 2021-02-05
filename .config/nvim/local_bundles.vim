@@ -23,9 +23,6 @@ Plug 'triglav/vim-visual-increment'
 
 " visual 
 Plug 'Rigellute/shades-of-purple.vim'
-Plug 'morhetz/gruvbox'
-Plug 'ayu-theme/ayu-vim'
-Plug 'NLKNguyen/papercolor-theme'
 
 "" LANGUAGE SUPPORT
 
