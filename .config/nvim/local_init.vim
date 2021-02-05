@@ -289,5 +289,3 @@ set laststatus=1
 set noshowmode
 set noshowcmd
 set shortmess+=F
-
-let g:clap_theme = 'material_design_dark'
