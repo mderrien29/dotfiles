@@ -57,11 +57,10 @@ augroup end
 "" Color
 set termguicolors
 syntax enable
-set background=dark
-let g:gruvbox_italic = 1
-colorscheme shades_of_purple
+set background=light
+colorscheme PaperColor
 let g:lightline = {
-  \ 'colorscheme': 'shades_of_purple',
+  \ 'colorscheme': 'PaperColor',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ], [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
   \ },

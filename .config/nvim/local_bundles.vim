@@ -22,7 +22,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'triglav/vim-visual-increment'
 
 " visual 
-Plug 'Rigellute/shades-of-purple.vim'
+Plug 'NLKNguyen/papercolor-theme'
 
 "" LANGUAGE SUPPORT
 
