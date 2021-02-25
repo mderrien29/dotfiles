@@ -2,23 +2,19 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="sunrise"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git zsh-autosuggestions zsh-vim-mode vi-mode )
+plugins=(git zsh-autosuggestions zsh-vi-mode )
 source $ZSH/oh-my-zsh.sh
 
 export TMPDIR="/tmp"
 
-MODE_CURSOR_VICMD="green block"
-MODE_CURSOR_VIINS="#20d08a blinking bar"
-MODE_CURSOR_SEARCH="#ff00ff steady underline"
-TMUX_PASSTHROUGH=1
+export TMUX_PASSTHROUGH=1
 # 1ms for key sequences
-KEYTIMEOUT=1
+export KEYTIMEOUT=1
 
 export EDITOR=nvim
 
 alias ll="ls -la" # 8/04
 alias nrun="npm run" # 9/05
-alias pop="xdg-open" # 11/07
 alias mvg="mvg -g"
 alias cpg="cpg -g"
 alias clear="clear -x" # potential security issue but w/e
@@ -89,3 +85,4 @@ if test -f .todo; then
   cat .todo
   echo ""
 fi
+

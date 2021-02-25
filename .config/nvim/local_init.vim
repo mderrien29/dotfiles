@@ -79,6 +79,8 @@ let g:lightline = {
   \ }
 \ }
 
+let g:clap_theme = 'solarized_light'
+
 "" Colorizer highlighting
 let g:colorizer_auto_filetype='css,html,vue,ts,js,tsx,jsx,scss'
 
@@ -288,3 +290,7 @@ set laststatus=1
 set noshowmode
 set noshowcmd
 set shortmess+=F
+
+" fix cursor with zsh vim plugins
+au InsertEnter * silent execute "!echo -en \<esc>[5 q"
+au InsertLeave * silent execute "!echo -en \<esc>[2 q"
