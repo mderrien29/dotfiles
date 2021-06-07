@@ -41,11 +41,6 @@ if has('autocmd')
   autocmd GUIEnter * set visualbell t_vb=
 endif
 
-if has('unnamedplus')
-" Copy/Paste/Cut
- set clipboard=unnamed,unnamedplus
-endif
-
 "" Clean search (highlight)
 nnoremap <silent> <leader><space> :noh<cr>
 
@@ -108,3 +103,8 @@ nnoremap <silent> <leader>sh :terminal<CR>
 nmap <leader>qf  <Plug>(coc-fix-current)
 nmap <silent> ge <Plug>(coc-definition)
 nmap <silent> gs :bel vsp<CR><Plug>(coc-definition)
+
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p

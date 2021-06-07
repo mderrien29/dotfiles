@@ -101,18 +101,11 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 let g:coc_global_extensions = [
 \'coc-tsserver',
+\'coc-eslint',
 \'coc-json',
 \'coc-html',
-\'coc-css',
-\'coc-vetur'
+\'coc-css'
 \]
-
-" fix files on save
-let g:ale_fix_on_save = 1
-
-" lint after 1000ms after changes are made both on insert mode and normal mode
-let g:ale_lint_on_text_changed = 'always'
-let g:ale_lint_delay = 1000
 
 " quotes in json
 let g:indentLine_setConceal = 0
@@ -152,15 +145,6 @@ set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -250,8 +234,8 @@ omap ac <Plug>(coc-classobj-a)
 nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
+" Add `:Prettier` command to format current buffer.
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
@@ -281,6 +265,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+" fix issue with coc windows not closing :
+nmap <Esc> :call coc#float#close_all() <CR>
 
 set nrformats=hex
 
