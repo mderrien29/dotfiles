@@ -26,6 +26,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 
 " visual 
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 
 "" LANGUAGE SUPPORT
 Plug 'leafgarland/typescript-vim'
