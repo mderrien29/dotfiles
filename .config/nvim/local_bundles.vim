@@ -30,6 +30,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'jparise/vim-graphql'
 
 " doc etc
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install'  }
