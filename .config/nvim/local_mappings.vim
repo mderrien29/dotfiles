@@ -24,10 +24,6 @@ nnoremap <leader>sc :CloseSession<CR>
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <C-t> :tabnew<CR>
-"nnoremap <C-w> :tabclose<CR>
-
-"" Opens a tab edit command with the path of the currently edited file filled
-noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Clap (fuzzy finder)
 nnoremap <silent> <leader>e :Clap files<CR>
@@ -79,12 +75,6 @@ nnoremap <silent> <F4> :call <SID>ToggleBlame()<CR>
 " pasting in visual mode will replace selection
 xnoremap p "_dP
 
-" indent file and keep cursor position
-nnoremap <silent> <leader>i mzgg=G`z<CR>
-
-"*****************************************************************************
-"" Abbreviations
-"*****************************************************************************
 "" no one is really happy until you have this shortcuts
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
@@ -97,14 +87,32 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
-" terminal emulation
-nnoremap <silent> <leader>sh :terminal<CR>
-
-nmap <leader>qf  <Plug>(coc-fix-current)
-nmap <silent> ge <Plug>(coc-definition)
-nmap <silent> gs :bel vsp<CR><Plug>(coc-definition)
-
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
+
+" <TAB>: completion.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Coc code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> ge <Plug>(coc-definition)
+nmap <silent> gs :bel vsp<CR><Plug>(coc-definition)
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nmap <Esc> :call coc#float#close_all() <CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocActionAsync('doHover')
+  endif
+endfunction

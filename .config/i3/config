@@ -24,7 +24,7 @@ bindsym $mod+Shift+l move right
 floating_modifier $mod
 bindsym $mod+n exec --no-startup-id flash_window
 # start a terminal
-bindsym $mod+Return exec "LIBGL_ALWAYS_SOFTWARE=1 alacritty -e tmux"
+bindsym $mod+Return exec wezterm
 # web browser
 bindsym $mod+Shift+Return exec vivaldi
 # picture-in-picture
