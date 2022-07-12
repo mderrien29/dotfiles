@@ -58,9 +58,9 @@ augroup end
 set termguicolors
 syntax enable
 set background=light
-colorscheme gruvbox
+colorscheme PaperColor
 let g:lightline = {
-  \ 'colorscheme': 'gruvbox',
+  \ 'colorscheme': 'PaperColor',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ], [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
   \ },
