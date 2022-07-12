@@ -18,7 +18,6 @@ Plug 'mengelbrecht/lightline-bufferline'
 
 " visual 
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'ntk148v/komau.vim'
 
 "" LANGUAGE SUPPORT
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

@@ -2,8 +2,9 @@
 set termguicolors
 syntax enable
 set background=light
-colorscheme komau
+colorscheme PaperColor
 let g:lightline = {
+  \ 'colorscheme': 'PaperColor',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ], [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
   \ },
