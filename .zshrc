@@ -22,6 +22,7 @@ alias adog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 alias vi=nvim
 alias ggfl="git --force-with-lease"
 alias cleanup_rebase='find . -regextype sed -regex ".*_\(\(BASE\)\|\(BACKUP\)\|\(LOCAL\)\|\(REMOTE\)\)_.*" -delete'
+alias indb="~/Documents/liveencheres/indb-docker/indb-dc"
 
 # transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi

@@ -18,10 +18,12 @@ Plug 'mengelbrecht/lightline-bufferline'
 
 " visual 
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'Rigellute/shades-of-purple.vim'
 
 "" LANGUAGE SUPPORT
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
+\'coc-prettier',
 \'coc-tsserver',
 \'coc-eslint',
 \'coc-json',

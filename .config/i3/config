@@ -1,9 +1,10 @@
 # Startup apps
-# exec --no-startup-id compton --config ~/.config/compton/compton.conf
-exec --no-startup-id setxkbmap -layout us -variant altgr-intl
+exec --no-startup-id compton
+exec --no-startup-id setxkbmap -layout us -variant altgr-intl -option ctrl:nocaps
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
 exec --no-startup-id autorandr -l work
 exec --no-startup-id dunst
+exec --no-startup-id ssh-agent
 # exec --no-startup-id nm-applet &
 # exec --no-startup-id blueman-applet &
 
@@ -26,7 +27,7 @@ bindsym $mod+n exec --no-startup-id flash_window
 # start a terminal
 bindsym $mod+Return exec wezterm
 # web browser
-bindsym $mod+Shift+Return exec vivaldi
+bindsym $mod+Shift+Return exec google-chrome
 # picture-in-picture
 bindsym $mod+c exec "i3-msg 'floating toggle; sticky toggle; resize set 640 360;move position 10px 10px;'"
 bindsym $mod+Shift+q kill
@@ -99,7 +100,7 @@ bindsym $mod+Control+l resize grow width 10 px or 10 ppt
 
 set $mode_system System (l) lock, (Shift+e) logout, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock
+    bindsym l exec --no-startup-id ~/Documents/dotfiles/scripts/debian/blurlock.sh
     bindsym Shift+e exec --no-startup-id i3-msg exit
     bindsym Shift+r exec --no-startup-id systemctl reboot
     bindsym Shift+s exec --no-startup-id systemctl poweroff
@@ -126,7 +127,7 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
 
-font pango:Fira Mono 10
+font pango:Fira 11, Material Design Icons 11
 
 bar {
   status_command SCRIPT_DIR=/home/martial/.config/i3blocks i3blocks -c ~/.config/i3blocks/config.top

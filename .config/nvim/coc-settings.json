@@ -1,3 +1,6 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript"]
+  "prettier.requireConfig": true, 
+  "eslint.autoFixOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "typescript"],
+  "suggest.noselect": true
 }

@@ -106,9 +106,12 @@ function set_default_playback_device_next {
 }
 
 case "$BLOCK_BUTTON" in
-    1) set_default_playback_device_next ;;
+    # disabled changing output because it's too easy to missclick and blast max volume rock into the office
+    # 1) set_default_playback_device_next ;;
+    1) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY toggle ;;
     2) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY toggle ;;
-    3) set_default_playback_device_next -1 ;;
+    # 3) set_default_playback_device_next -1 ;;
+    3) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY toggle ;;
     4) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA%+ ;;
     5) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA%- ;;
 esac

@@ -2,9 +2,10 @@
 set termguicolors
 syntax enable
 set background=light
-colorscheme PaperColor
+colorscheme shades_of_purple
+let g:shades_of_purple_lightline = 1
 let g:lightline = {
-  \ 'colorscheme': 'PaperColor',
+  \ 'colorscheme': 'shades_of_purple',
   \ 'active': {
   \   'left': [ [ 'mode', 'paste' ], [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
   \ },
@@ -78,3 +79,5 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+set clipboard=unnamedplus

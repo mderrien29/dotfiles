@@ -107,7 +107,7 @@ signal=10
 # The second parameter overrides the mixer selection
 # See the script for details.
 
-[volume]
+[volume-pulseaudio]
 label=♪
 #label=VOL
 interval=5
