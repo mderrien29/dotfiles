@@ -11,6 +11,7 @@ Plug 'sgur/vim-editorconfig'
 Plug 'chrisbra/colorizer'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kshenoy/vim-signature'
+Plug 'nullchilly/fsread.nvim'
 
 " lightline
 Plug 'itchyny/lightline.vim'

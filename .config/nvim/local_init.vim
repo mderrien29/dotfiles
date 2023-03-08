@@ -23,7 +23,7 @@ let g:lightline = {
   \   'cocstatus': 'coc#status'
   \ }
 \ }
-let g:clap_theme = 'onehalflight'
+" let g:clap_theme = 'onehalf'
 
 " undo
 set undofile
