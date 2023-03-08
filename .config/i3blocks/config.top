@@ -73,33 +73,14 @@ interval=10
 command=$SCRIPT_DIR/kbdd_layout
 interval=persist
 
-# [batterybar]
-# command=$SCRIPT_DIR/batterybar
-# interval=5
-# label=⚡
-# markup=pango
-# min_width=■■■■■
-# Discharging colors low to high
-#C1=#FF0027
-#C2=#FF3B05
-#C3=#FFB923
-#C4=#FFD000
-#C5=#E4FF00
-#C6=#ADFF00
-#C7=#6DFF00
-#C8=#10BA00
-#CHARGING_COLOR=#00AFE3
-#FULL_COLOR=#FFFFFF
-#AC_COLOR=#535353
-
-# Generic media player support
-#
-# This displays "ARTIST - SONG" if a music is playing.
-# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
-[mediaplayer]
-instance=spotify
-interval=5
-signal=10
+## Generic media player support
+##
+## This displays "ARTIST - SONG" if a music is playing.
+## Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer]
+#instance=spotify
+#interval=5
+#signal=10
 
 # Volume indicator
 #
@@ -133,10 +114,28 @@ label=
 # signal=1
 # interval=3600
 
+[batterybar]
+command=$SCRIPT_DIR/batterybar
+interval=5
+label=⚡
+markup=pango
+min_width=■■■■■
+# Discharging colors low to high
+#C1=#FF0027
+#C2=#FF3B05
+#C3=#FFB923
+#C4=#FFD000
+#C5=#E4FF00
+#C6=#ADFF00
+#C7=#6DFF00
+#C8=#10BA00
+#CHARGING_COLOR=#00AFE3
+#FULL_COLOR=#FFFFFF
+#AC_COLOR=#535353
+
 [user]
 label=
 interval=once
-
 
 #[shutdown_menu]
 #full_text=

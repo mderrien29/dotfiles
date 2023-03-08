@@ -100,7 +100,7 @@ bindsym $mod+Control+l resize grow width 10 px or 10 ppt
 
 set $mode_system System (l) lock, (Shift+e) logout, (Shift+r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/Documents/dotfiles/scripts/debian/blurlock.sh
+    bindsym l exec --no-startup-id ~/Documents/dotfiles/scripts/blurlock.sh
     bindsym Shift+e exec --no-startup-id i3-msg exit
     bindsym Shift+r exec --no-startup-id systemctl reboot
     bindsym Shift+s exec --no-startup-id systemctl poweroff
