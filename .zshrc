@@ -23,6 +23,8 @@ alias vi=nvim
 alias ggfl="git --force-with-lease"
 alias cleanup_rebase='find . -regextype sed -regex ".*_\(\(BASE\)\|\(BACKUP\)\|\(LOCAL\)\|\(REMOTE\)\)_.*" -delete'
 alias indb="~/Documents/liveencheres/indb-docker/indb-dc"
+alias squash="~/Documents/dotfiles/scripts/squash.sh"
+alias todo="nvim ~/Documents/todo.md"
 
 # transfer.sh
 transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
@@ -66,6 +68,8 @@ dict() {
 help() {
   curl cheat.sh/$1
 }
+
+rebase_after_squash () { git rebase --onto master $(git merge-base "$1" "$2") "$1"; }
 
 if test -f $HOME/.local/bin/aws; then
   export PATH=/home/martial/.local/bin:$PATH
