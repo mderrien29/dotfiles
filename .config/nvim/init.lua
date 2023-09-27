@@ -1,0 +1,5 @@
+require('plugins')
+require('theme')
+require('base')
+require('telescope-config')
+require('syntax')
