@@ -3,7 +3,6 @@ vim.g.mapleader = ","
 vim.cmd.set('undofile')
 vim.cmd.set('undodir=$HOME/.vim/undo')
 
-vim.wo.relativenumber = true
 vim.cmd.set('autoread')
 vim.cmd.set('cursorline')
 vim.cmd.set('mouse=a')
@@ -11,9 +10,13 @@ vim.cmd.set('noshowmode')
 vim.cmd.set('noshowcmd')
 vim.cmd.set('shortmess+=F')
 vim.cmd.set('nrformats=hex')
-vim.cmd.set('re=0')
+vim.cmd.set('re=0') -- disable regex
 vim.cmd.set('updatetime=300')
 vim.cmd.set('encoding=utf-8')
+
+-- hybrid line number
+vim.wo.relativenumber = true
+vim.wo.number = true
 
 -- tabs
 vim.cmd.set('expandtab')
