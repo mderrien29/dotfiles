@@ -24,7 +24,9 @@ return require('packer').startup(function(use)
   use 'christoomey/vim-tmux-navigator'
   use 'kshenoy/vim-signature'
   use 'nvim-lualine/lualine.nvim'
+
   use 'Rigellute/shades-of-purple.vim'
+  use 'xiyaowong/transparent.nvim'
 
   use { 'nvim-telescope/telescope.nvim', requires={{'nvim-lua/plenary.nvim'}} }
 

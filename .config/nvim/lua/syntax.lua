@@ -1,3 +1,5 @@
+vim.api.nvim_create_user_command('Prettier', ':CocCommand prettier.forceFormatDocument', {})
+
 vim.api.nvim_create_autocmd(
 	{ 'BufEnter' },
 	{ pattern='*', command='syntax sync fromstart' }
