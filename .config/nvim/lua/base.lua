@@ -42,6 +42,9 @@ vim.keymap.set('n', '<leader>p', '"+p')
 vim.keymap.set('x', '<leader>y', '"+y')
 vim.keymap.set('x', '<leader>p', '"+p')
 
+-- remove highlight
+vim.keymap.set('', '<leader><space>', ':noh<cr>')
+
 -- alias wq
 vim.cmd([[
   cnoreabbrev W! w!

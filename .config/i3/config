@@ -5,6 +5,7 @@ exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
 exec --no-startup-id autorandr -l work
 exec --no-startup-id dunst
 exec --no-startup-id ssh-agent
+exec --no-startup-id redshift -O 3500
 # exec --no-startup-id nm-applet &
 # exec --no-startup-id blueman-applet &
 
