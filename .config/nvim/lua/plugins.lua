@@ -25,8 +25,11 @@ return require('packer').startup(function(use)
   use 'kshenoy/vim-signature'
   use 'nvim-lualine/lualine.nvim'
 
+  use 'NLKNguyen/papercolor-theme'
   use 'Rigellute/shades-of-purple.vim'
   use 'xiyaowong/transparent.nvim'
+
+  use { 'iamcco/markdown-preview.nvim', run='cd app && npx yarn install', cmd='MarkdownPreview' }
 
   use { 'nvim-telescope/telescope.nvim', requires={{'nvim-lua/plenary.nvim'}} }
 

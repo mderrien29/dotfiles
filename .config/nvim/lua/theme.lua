@@ -1,5 +1,8 @@
-vim.cmd.set('termguicolors')
-vim.cmd.colorscheme('shades_of_purple')
+-- vim.cmd.set('termguicolors')
+-- vim.cmd.colorscheme('shades_of_purple')
+
+vim.cmd('set background=light')
+vim.cmd.colorscheme('PaperColor')
 
 require('lualine').setup {
   options = {
