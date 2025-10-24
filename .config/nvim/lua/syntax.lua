@@ -1,3 +1,4 @@
+require('mason').setup()
 vim.api.nvim_create_user_command('Prettier', ':CocCommand prettier.forceFormatDocument', {})
 
 vim.api.nvim_create_autocmd(
@@ -26,16 +27,10 @@ vim.keymap.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_
 vim.keymap.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 vim.keymap.set('i', "<CR>", [[pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"]], opts)
 
-vim.keymap.set('n', 'gd', '<Plug>(coc-definition)', { silent=true })
-vim.keymap.set('n', 'gy', '<Plug>(coc-type-definition)', { silent=true })
-vim.keymap.set('n', 'gi', '<Plug>(coc-implementation)', { silent=true })
-vim.keymap.set('n', 'gr', '<Plug>(coc-references)', { silent=true })
-vim.keymap.set('n', 'f', ' <Plug>(coc-fix-current)', { silent=true })
-vim.keymap.set('n', '<leader>n', '<Plug>(coc-rename)', { silent=true })
-vim.keymap.set('n', 'ge', '<Plug>(coc-definition)', { silent=true })
-vim.keymap.set('n', 'gs', ':bel vsp<CR><Plug>(coc-definition)', { silent=true })
+vim.keymap.set('n', 'gs', ':vsplit<CR><Plug>(coc-definition)', { silent=true })
+vim.keymap.set('n', 'gr', ':vsplit<CR><Plug>(coc-references)', { silent=true })
+vim.keymap.set('n', '<leader>r', '<Plug>(coc-rename)', { silent=true })
 vim.keymap.set('n', '<Esc>', ':call coc#float#close_all()<CR>', { silent=true })
-
 
 -- Use K to show documentation in preview window
 function _G.show_docs()

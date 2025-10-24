@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
   use 'tpope/vim-sensible'
   use 'airblade/vim-gitgutter'
+  use 'sindrets/diffview.nvim'
   use 'tpope/vim-commentary'
   use 'sgur/vim-editorconfig'
   use 'christoomey/vim-tmux-navigator'
@@ -33,10 +34,40 @@ return require('packer').startup(function(use)
 
   use { 'nvim-telescope/telescope.nvim', requires={{'nvim-lua/plenary.nvim'}} }
 
+  use { 'mason-org/mason.nvim' }
   use { 'neoclide/coc.nvim', branch='release' }
   use { 'neoclide/coc-tsserver' }
   use { 'neoclide/coc-prettier' }
   use { 'neoclide/coc-eslint' }
+
+  use { 'ibhagwan/fzf-lua' }
+  use {
+    'frankroeder/parrot.nvim',
+    requires = { 'ibhagwan/fzf-lua', 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('parrot').setup {
+        providers = {
+          custom = {
+            style = "openai",
+            api_key = os.getenv 'OPENAI_API_KEY',
+            endpoint = "https://martelia.indb.io/api/chat/completions",
+            models = {
+              "martelia",
+              "dave",
+              "dave-completion-backend",
+            },
+            params = {
+              chat = { max_tokens = 4096 },
+              command = { max_tokens = 4096 },
+            },
+          }
+          -- ollama = {}
+        },
+
+        cmd_prefix = 'Ai'
+      }
+    end,
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
