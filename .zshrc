@@ -22,7 +22,8 @@ alias adog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold 
 alias vi=nvim
 alias ggfl="git --force-with-lease"
 alias cleanup_rebase='find . -regextype sed -regex ".*_\(\(BASE\)\|\(BACKUP\)\|\(LOCAL\)\|\(REMOTE\)\)_.*" -delete'
-alias indb="~/Documents/liveencheres/indb-docker/indb-dc"
+alias indb="~/Documents/interencheres/indb-docker/bin/indb-dc"
+alias idc="DC_FEATURES=tests DC_SKIPDEPS=true ~/Documents/interencheres/indb-docker/bin/indb-dc"
 alias squash="~/Documents/dotfiles/scripts/squash.sh"
 alias todo="nvim ~/Documents/todo.md"
 
