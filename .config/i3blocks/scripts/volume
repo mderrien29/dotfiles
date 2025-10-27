@@ -1,0 +1,25 @@
+#!/bin/bash
+# i3blocks volume module (clic et molette)
+
+get_volume() {
+    pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]{1,3}(?=%)' | head -1
+}
+
+get_mute() {
+    pactl get-sink-mute @DEFAULT_SINK@ | grep -q yes && echo "mute" || echo "on"
+}
+
+case $BLOCK_BUTTON in
+    1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;  # clic gauche : mute/unmute
+    4) pactl set-sink-volume @DEFAULT_SINK@ +5% ;;   # molette haut : +
+    5) pactl set-sink-volume @DEFAULT_SINK@ -5% ;;   # molette bas : -
+esac
+
+vol=$(get_volume)
+mute=$(get_mute)
+
+if [ "$mute" = "mute" ]; then
+    echo "mute"
+else
+    echo "${vol}%"
+fi

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+get_interface() {
+    ip route get 1.1.1.1 2>/dev/null | awk '{print $5; exit}'
+}
+
+get_ip() {
+    iface=$(get_interface)
+    [ -n "$iface" ] && ip -br addr show "$iface" | awk '{print $3}' | cut -d/ -f1
+}
+
+case $BLOCK_BUTTON in
+    1)
+        # clic gauche → ouvre le panneau réseau d’Elementary OS
+        nohup gio open "settings://network" >/dev/null 2>&1 &
+        ;;
+esac
+
+ip=$(get_ip)
+if [ -n "$ip" ]; then
+    echo "$ip"
+else
+    echo "offline"
+fi

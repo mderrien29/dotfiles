@@ -1,0 +1,9 @@
+#!/bin/bash
+BAT=$(acpi -b 2>/dev/null | grep -Eo '[0-9]+%' | tr -d '%')
+STATE=$(acpi -b 2>/dev/null | grep -o "Charging\|Discharging\|Full")
+
+if [ "$STATE" = "Charging" ]; then
+    echo "${BAT}% ⚡"
+else
+    echo "${BAT}%"
+fi

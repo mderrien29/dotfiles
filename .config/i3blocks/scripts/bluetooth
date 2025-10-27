@@ -1,0 +1,24 @@
+#!/bin/bash
+
+get_status() {
+    bluetoothctl show | grep "Powered: yes" >/dev/null && echo "on" || echo "off"
+}
+
+get_connected_devices() {
+    bluetoothctl info | grep "Device" | wc -l
+}
+
+case $BLOCK_BUTTON in
+    1)
+        # Clic gauche → ouvre blueman-manager
+        nohup blueman-manager >/dev/null 2>&1 &
+        ;;
+esac
+
+status=$(get_status)
+if [ "$status" = "on" ]; then
+    devices=$(get_connected_devices)
+    echo "✅ ($devices)"
+else
+    echo "❌"
+fi

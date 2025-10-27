@@ -1,0 +1,18 @@
+#!/bin/bash
+
+is_vpn_on() {
+    nmcli con show --active | grep -q vpn
+}
+
+case $BLOCK_BUTTON in
+    1)
+        # clic gauche → ouvre le panneau réseau d’Elementary OS
+        nohup gio open "settings://network" >/dev/null 2>&1 &
+        ;;
+esac
+
+if is_vpn_on; then
+    echo "✅"
+else
+    echo "❌"
+fi
