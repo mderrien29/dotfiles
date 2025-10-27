@@ -5,9 +5,6 @@ exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpapers/*
 exec --no-startup-id autorandr -l work
 exec --no-startup-id dunst
 exec --no-startup-id ssh-agent
-# exec --no-startup-id redshift -O 4000
-# exec --no-startup-id nm-applet &
-# exec --no-startup-id blueman-applet &
 
 # Keybindings
 set $mod Mod4
@@ -87,9 +84,9 @@ bindsym $mod+Control+j resize grow height 10 px or 10 ppt
 bindsym $mod+Control+k resize shrink height 10 px or 10 ppt
 bindsym $mod+Control+l resize grow width 10 px or 10 ppt
 
-set $mode_system System (l) lock, (Shift+e) logout, (Shift+r) reboot, (Shift+s) shutdown
+set $mode_system System (L) lock, (Shift+E) logout, (Shift+R) reboot, (Shift+S) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/Documents/dotfiles/scripts/blurlock.sh
+    bindsym l exec --no-startup-id ~/Documents/dotfiles/scripts/blurlock.sh; mode "default"
     bindsym Shift+e exec --no-startup-id i3-msg exit
     bindsym Shift+r exec --no-startup-id systemctl reboot
     bindsym Shift+s exec --no-startup-id systemctl poweroff
@@ -122,12 +119,12 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
 
-font pango:Fira 11, Material Design Icons 9
+font pango:Fira 11, Material Design Icons 11
 
 bar {
-  #status_command i3status -c ~/.config/i3/statusbar
   status_command i3blocks
   strip_workspace_numbers yes
+  workspace_min_width 40
   position bottom
   tray_output none
 }

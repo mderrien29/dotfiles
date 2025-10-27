@@ -1,0 +1,15 @@
+#!/bin/bash
+
+CITY="Rennes"
+
+weather=$(curl -s "https://wttr.in/$CITY?format=1")
+
+if [[ $weather == *"☀"* ]]; then
+    echo "☀️ $weather"
+elif [[ $weather == *"🌧"* ]]; then
+    echo "🌧 $weather"
+elif [[ $weather == *"⛅"* ]]; then
+    echo "⛅ $weather"
+else
+    echo "🌡️ $weather"
+fi

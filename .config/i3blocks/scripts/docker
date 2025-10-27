@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Compter les containers en cours
+count=$(docker ps -q 2>/dev/null | wc -l)
+
+# Affichage avec emoji
+if [ "$count" -gt 0 ]; then
+    echo "$count"
+else
+    echo "0"
+fi
